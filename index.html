@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
         body{
-            background-color: rgb(148, 147, 147);
+            background-color: white;
         }      
         .home{
             margin-top: 80px;
@@ -44,6 +44,66 @@
             left: 0;
             top: 0%;
         }  
+        .albumet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .fototEAlbumeve{
+            width: 25%;
+            margin: 10px;
+        }
+        .fototEAlbumeve img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .discography{
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+        footer{
+            background-color: rgb(230, 229, 229);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            justify-content: space-between;
+        }
+        .f{
+            color: green;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-evenly;
+        }
+        .ff a img {
+            width: 25px;
+            height: 25px; 
+            margin-top: 20px;
+        }
+
+        .footermain{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-evenly;
+        }
+        .footerleft{
+            max-width: 300px;
+        }
+        .fundi {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center; 
+        }
+
+        .fundi p {
+            width: 50%; 
+        
+        }
       
     </style>
 
@@ -63,7 +123,7 @@
          </ul>
     </header>
 
-    
+
     <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
 
     <div class="home">
@@ -71,10 +131,79 @@
             <h1>WELCOME TO UTOPIA</h1>
         </div>
     </div>
+
+    <div class="discography">
+        <h1>Discography</h1>
+    </div>
+    <div class="albumet" > 
+        <div class="fototEAlbumeve">
+            <div class="rodeo"> 
+                <a href=""> <img src="rodeoCover.jpg" alt=""></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+        <div class="fototEAlbumeve">
+            <div class="birdsInTheTrap">
+                <a href=""> <img src="birdsInTheTrapCover.jpg" alt=""></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+        <div class="fototEAlbumeve">
+            <div class="hunchoJack"> 
+                <a href=""> <img src="hunchoJackCover.jpg" alt=""></a> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+        <div class="fototEAlbumeve">
+            <div class="astroworld">
+                <a href=""> <img src="Astroworld.jpg" alt=""></a> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+        <div class="fototEAlbumeve">
+            <div class="jackboys">
+                <a href=""> <img src="jackboysCover.jpg" alt=""></a> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+        <div class="fototEAlbumeve">
+            <div class="utopia">
+                <a href=""> <img src="utopia.jpg" alt=""></a> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        dfdf
-        dfd
-        fdf
+        <div class="f">
+            <h2>footer(mi ndrru)</h2>
+            <h2>Our Links</h2>
+            <div class="ff">
+                <a href=""><img src="facebook.png" alt=""></a>
+                <a href=""><img src="twitter.png" alt=""></a>
+                <a href=""><img src="instagram.png" alt=""></a>
+                <a href=""><img src="pinterest.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footermain">
+            <div class="footerleft">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum voluptatibus quam facilis. Culpa qui aspernatur nisi autem saepe laudantium praesentium vel nihil cupiditate id a ratione sequi, accusantium placeat.</p>
+            </div>
+            <div class="footercenter">
+                <p>Advertise</p>
+                <p>Support</p>
+                <p>Our Company</p>
+                <p>Contact</p>
+            </div>
+            <div class="footerright">
+                <p>Terms of use</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+        <div class="fundi">
+            <p>Copyright 2020 Catalog-Z Company. All rights reserved.</p>
+            <p>Designed by TemplateMo</p>
+        </div>
     </footer>
 
     
