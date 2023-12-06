@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .tickets{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(Astroworld.jpg);
+            background-size: 100% 100%;
+            
+        }
+        .form-container{
+            width: 300px;
+            background-color: silver;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .form-container h1{
+            text-align: center;
+        }
+        input,select{
+            width: 100%;   
+            height: 20px;
+            border: none; 
+            border-bottom: 2px solid #2691d9;
+            outline: none;
+            background-color: transparent;
+        }
+        label{
+            margin-left: 10px;
+        }
+        button{
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #145b97;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header> 
+        <div class="header">
+            <a href="index.html">
+                <img src="logo.png"alt="LOGO">
+            </a>
+        </div>
+        <ul class="">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="https://shop.travisscott.com/">Store</a></li>
+            <li><a href="buytickets.html">Buy Tickets</a></li>
+         </ul>
+    </header>
+
+    <div class="tickets">
+        <div class="form-container">
+            <h1>Blej tani bileten</h1>
+            <form action="">
+                <div class="name">
+                    <label for="">Emri</label><br>
+                    <input type="name"><br>
+                </div><br>
+                <div class="surname">
+                    <label for="">Mbiemri</label><br>
+                    <input type="surname"><br>
+                </div><br>
+                <div class="email">
+                    <label for="">Email</label><br>
+                    <input type="email"><br>
+                </div><br>
+                <div class="select-container">
+                    <label for="select">Zgjidh qytetin</label><br>
+                    <select name="select" id="">
+                        <option value="Berlin">Berlin</option>
+                        <option value="New York">New York</option>
+                        <option value="Paris">Paris</option>
+                        <option value="London">London</option>
+                    </select>
+                </div><br>
+                <div class="date">
+                    <label for="date">Zgjidh daten</label><br>
+                    <input type="date" id="date" name="date" required><br>
+                </div><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
