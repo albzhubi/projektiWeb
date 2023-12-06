@@ -9,7 +9,41 @@
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
         body{
             background-color: rgb(148, 147, 147);
-        }        
+        }      
+        .home{
+            margin-top: 80px;
+            height: 700px;
+            position: relative;
+            background-image: url(foto2.png);
+            background-size: 100% 100%;   
+        }
+        .home::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .welcome{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 250px;            
+            font-family: 'Montserrat', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+            font-size: 40px;
+            z-index: 9999999999;
+
+        }
+        #logo{
+            width: 80px;
+            height: 45px;
+            left: 0;
+            top: 0%;
+        }  
       
     </style>
 
@@ -29,6 +63,19 @@
          </ul>
     </header>
 
+    
+    <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+
+    <div class="home">
+        <div class="welcome">
+            <h1>WELCOME TO UTOPIA</h1>
+        </div>
+    </div>
+    <footer>
+        dfdf
+        dfd
+        fdf
+    </footer>
 
     
 </body>
