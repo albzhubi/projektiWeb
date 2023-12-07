@@ -11,7 +11,7 @@
             background-color: white;
         }      
         .home{
-            margin-top: 80px;
+            margin-top: 50px;
             height: 700px;
             position: relative;
             background-image: url(foto2.png);
@@ -24,15 +24,15 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
         }
         .welcome{
             display: flex;
             justify-content: center;
             align-items: center;
             padding-top: 250px;            
-            font-family: 'Montserrat', sans-serif;
-            color: rgba(255, 255, 255, 0.9);
+            font-family: 'IBM Plex Mono', monospace;
+            color: rgba(255, 255, 255);
             font-weight: bold;
             font-size: 40px;
             z-index: 9999999999;
@@ -41,9 +41,22 @@
         #logo{
             width: 80px;
             height: 45px;
-            left: 0;
-            top: 0%;
+            
         }  
+        .buyticketsbutton{
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 230px;
+            height: 50px;
+            background-color: #33b249;
+            border-radius: 25px;
+            border: none;
+            font-size: 16px;
+            font-family: 'IBM Plex Mono', monospace;
+            cursor: pointer;
+            z-index: 999999;
+        }
         .albumet{
             display: flex;
             flex-wrap: wrap;
@@ -60,49 +73,9 @@
             border-radius: 20px;
         }
         .discography{
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'IBM Plex Mono', monospace;
             display: flex;
             justify-content: center;
-        }
-        footer{
-            background-color: rgb(230, 229, 229);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            justify-content: space-between;
-        }
-        .f{
-            color: green;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-content: space-evenly;
-        }
-        .ff a img {
-            width: 25px;
-            height: 25px; 
-            margin-top: 20px;
-        }
-
-        .footermain{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-content: space-evenly;
-        }
-        .footerleft{
-            max-width: 300px;
-        }
-        .fundi {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center; 
-        }
-
-        .fundi p {
-            width: 50%; 
-        
         }
       
     </style>
@@ -119,7 +92,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
-            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.html">Buy Tickets</a></li>
          </ul>
     </header>
 
