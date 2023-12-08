@@ -63,23 +63,47 @@
 
     <div class="container">
             <h1>LOGIN</h1>
-        <form action="">
+        <form action="" onsubmit=" return validateForm(event)">
             <div class="username">
-                <label for="">Username</label><br>
-                <input type="username"><br>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required><br>
             </div><br>
             <div class="password">
-                <label for="">Password</label><br>
-                <input type="password"><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br>
             </div>
             <br>
-            <button type="submit"><a href="buytickets.html">Submit</a></button><br>
+            <button type="submit">Submit</button><br>
             <div class="create">
-                <p><a href="buytickets.html">Nuk jeni regjistruar ende? Regjistrohu</a></p>
+                <p><a href="register.html">Nuk jeni regjistruar ende? Regjistrohu</a></p>
             </div>
         </form>
     </div>
         
+    <script>
+        function validateForm(event){
+            event.preventDefault();
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            let usernameRegex = /^[a-z]{1,12}$/;
+            if(!usernameRegex.test(username)){
+                alert('Plase enter a valid username');
+                return false;
+            }
+            
+            let passwordRegex = /^[a-z]+[0-9]{1,8}$/;
+            if(!passwordRegex.test(password)){
+                alert('Please enter a valid password');
+                return false;
+            }
+            if(password.length < 6){
+                alert('Password must be at least 6 characters');
+                return;
+            } 
+            window.location.href = "buytickets.html";
+        }
+    </script>
 
 </body>
 </html>
