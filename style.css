@@ -8,20 +8,17 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
-    background-color: antiquewhite;
-    border-bottom: 0px;
-    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 25px 0 black;
     z-index: 999;
 }
 header li{
+    color: white;
     display: inline;
     margin-right: 180px;
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'IBM Plex Mono', monospace;
 }
 header a{
@@ -30,6 +27,7 @@ header a{
 
 }
 #logo{
+
     width: 90px;
     height: 60px;
 }
@@ -71,5 +69,20 @@ footer{
 
 .fundi p {
     width: 50%; 
+
+}
+.buyticketsbutton{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 230px;
+    height: 50px;
+    background-color: #F75431;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    z-index: 999999;
 
 }

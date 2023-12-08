@@ -13,8 +13,8 @@
             background: #000;
         }
         .image-slider{
-            min-height: 30em;
-            height: 100vh;
+            margin-top: 50px;
+            height: 600px;
             position: relative;
             background-image: url(Astroworld.jpg);
             background-repeat: no-repeat;
@@ -174,7 +174,7 @@
         let id = 0;
 
         function slide(id) {
-            slider.style.backgroundImage = `url(img/${images[id]})`;
+            slider.style.backgroundImage = `url(${images[id]})`;
 
             slider.classList.add('image-fade');
 
