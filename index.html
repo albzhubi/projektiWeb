@@ -7,25 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
-        body{
-            background-color: white;
-        }      
-        .home{
-            /* margin-top: 50px; */
-            height: 700px;
-            position: relative;
-            background-image: url(foto3.jpg);
-            background-size: 100% 100%;  
-        }
-        .home::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);   
-        } 
+           
         .welcome{
             display: flex;
             justify-content: center;
@@ -72,70 +54,73 @@
 
 </head>
 <body>
-    <header> 
-        <div class="header">
-            <a href="index.html">
-                <img src="logo.png" id="logo">
-            </a>
-        </div>
-        <ul class="">
+    <header class="home"> 
+        <div class="header ">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" id="logo">
+                </a>
+            </div>
+       
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
             <li><a href="login.html">Buy Tickets</a></li>
          </ul>
+        </div>
+        <div class="home">
+            <div class="welcome">
+                <h1>Utopia Tours </h1>
+            </div>
+            <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+        </div>
     </header>
-
-
-    <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
-
-    <div class="home">
-        <div class="welcome">
-            <h1>Utopia Tours </h1>
-        </div>
-    </div>
-
-    <div class="discography">
-        <h1>Discography</h1>
-    </div>
-    <div class="albumet" > 
-        <div class="fototEAlbumeve">
-            <div class="utopia"> 
-                <a href="https://music.apple.com/us/album/utopia/1699712635" target="_blank"> <img src="utopia.jpg" alt=""></a> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <main>
+        <div class="main5">  
+            <div class="discography">
+                <h1>Discography</h1>
+            </div>
+            <div class="albumet" > 
+                <div class="fototEAlbumeve">
+                    <div class="utopia"> 
+                        <a href="https://music.apple.com/us/album/utopia/1699712635" target="_blank"> <img src="utopia.jpg" alt=""></a> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
+                <div class="fototEAlbumeve">
+                    <div class="jackboys">
+                        <a href="https://music.apple.com/us/album/jackboys/1492785997" target="_blank"> <img src="jackboysCover.jpg" alt=""></a> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
+                <div class="fototEAlbumeve">
+                    <div class="astroworld"> 
+                        <a href="https://music.apple.com/us/album/astroworld/1421241217" target="_blank"> <img src="Astroworld.jpg" alt=""></a> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
+                <div class="fototEAlbumeve">
+                    <div class="hunchoJack">
+                        <a href="https://music.apple.com/us/album/huncho-jack-jack-huncho/1440902652" target="_blank" > <img src="hunchoJackCover.jpg" alt=""></a> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
+                <div class="fototEAlbumeve">
+                    <div class="birdsInTheTrap">
+                        <a href="https://music.apple.com/us/album/birds-in-the-trap-sing-mcknight/1150135681" target="_blank" > <img src="birdsInTheTrapCover.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
+                <div class="fototEAlbumeve">
+                    <div class="rodeo">
+                        <a href="https://music.apple.com/us/album/rodeo/1456176981" target="_blank" > <img src="rodeoCover.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="fototEAlbumeve">
-            <div class="jackboys">
-                <a href="https://music.apple.com/us/album/jackboys/1492785997" target="_blank"> <img src="jackboysCover.jpg" alt=""></a> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-        </div>
-        <div class="fototEAlbumeve">
-            <div class="astroworld"> 
-                <a href="https://music.apple.com/us/album/astroworld/1421241217" target="_blank"> <img src="Astroworld.jpg" alt=""></a> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-        </div>
-        <div class="fototEAlbumeve">
-            <div class="hunchoJack">
-                <a href="https://music.apple.com/us/album/huncho-jack-jack-huncho/1440902652" target="_blank" > <img src="hunchoJackCover.jpg" alt=""></a> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-        </div>
-        <div class="fototEAlbumeve">
-            <div class="birdsInTheTrap">
-                <a href="https://music.apple.com/us/album/birds-in-the-trap-sing-mcknight/1150135681" target="_blank" > <img src="birdsInTheTrapCover.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-        </div>
-        <div class="fototEAlbumeve">
-            <div class="rodeo">
-                <a href="https://music.apple.com/us/album/rodeo/1456176981" target="_blank" > <img src="rodeoCover.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer>
         <div class="f">

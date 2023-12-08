@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
-        body{
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .tickets{
+        /* .tickets{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -56,45 +53,66 @@
             width: 80px;
             height: 45px;
             
-        } 
+        }  */
+        main .tickets{
+            background: rgb(32, 32, 55);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .form-container form{
+            display: flex;
+            column-gap: 10px;
+            border: 1px solid black;
+            width: 100%;
+            margin: auto;
+            height: 50px;
+        }
+
+        .form-container form input, .form-container form select{
+            height: 50px;
+            border-radius: 10px;
+        }
     </style>
 
 </head>
 <body>
     <header> 
         <div class="header">
-            <a href="index.html">
-                <img src="logo.png" id="logo">
-            </a>
-        </div>
-        <ul class="">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" id="logo">
+                </a>
+            </div>
+       
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
-            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.html">Buy Tickets</a></li>
          </ul>
+        </div>
     </header>
-
+    <main>
     <div class="tickets">
+        <h1>Blej tani bileten</h1>
         <div class="form-container">
-            <h1>Blej tani bileten</h1>
             <form action="">
                 <div class="name">
-                    <label for="">Emri</label><br>
-                    <input type="name"><br>
+                    <input type="name" placeholder="Add name"><br>
                 </div><br>
                 <div class="surname">
-                    <label for="">Mbiemri</label><br>
-                    <input type="surname"><br>
+                    <input type="surname" placeholder="Add surname"><br>
                 </div><br>
                 <div class="email">
-                    <label for="">Email</label><br>
-                    <input type="email"><br>
+                    <input type="email" placeholder="Add email"><br>
                 </div><br>
                 <div class="select-container">
-                    <label for="select">Zgjidh qytetin</label><br>
                     <select name="select" id="">
+                        <option value="Choose">Choose place</option>
                         <option value="Berlin">Berlin</option>
                         <option value="New York">New York</option>
                         <option value="Paris">Paris</option>
@@ -102,13 +120,13 @@
                     </select>
                 </div><br>
                 <div class="date">
-                    <label for="date">Zgjidh daten</label><br>
-                    <input type="date" id="date" name="date" required><br>
+                    <input type="date" id="date" name="date" placeholder="Add date" required><br>
                 </div><br>
                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
+</main>
 
 </body>
 </html>

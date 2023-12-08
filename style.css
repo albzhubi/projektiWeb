@@ -2,22 +2,58 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Open+Sans:wght@700&display=swap');
 
 body{
+    background-color: white;
+    padding: 0;
     margin: 0;
+}  
+header.home {
+    background-image: url(foto3.jpg);
+    background-size:cover;  
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 700px;
+
 }
-header{
+header.tours {
+
+    background-repeat: no-repeat;
+    background-position: top;
+    
+
+}
+header .header{
     top: 0;
-    position: fixed;
+    /* position: fixed; */
+    max-width: 80%;
     width: 100%;
+    margin: auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    left: 0;
+    right: 0;
+    padding: 15px 0px;
+}
+header.home:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);   
+}
+
+header .nav-list {
+    display: flex;
+    column-gap: 30px;
     z-index: 999;
+    
 }
 header li{
     color: white;
     display: inline;
-    margin-right: 180px;
     font-size: 22px;
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -30,6 +66,11 @@ header a{
 
     width: 90px;
     height: 60px;
+}
+.main{
+    max-width: 80%;
+    width: 100%;
+    margin: auto
 }
 footer{
     background-color: rgb(230, 229, 229);
@@ -71,7 +112,7 @@ footer{
     width: 50%; 
 
 }
-.buyticketsbutton{
+/* .buyticketsbutton{
     position: fixed;
     left: 20px;
     bottom: 20px;
@@ -85,4 +126,4 @@ footer{
     cursor: pointer;
     z-index: 999999;
 
-}
+} */
