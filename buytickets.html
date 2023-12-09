@@ -55,13 +55,16 @@
             
         }  */
         
+        .buyticketsHeader{
+            background-color: grey;
+        }
 
         main .tickets{
             /* background: url(https://img.freepik.com/premium-vector/modern-colorful-3d-wave-wide-banner-background-abstract-background-banner-design-web-banner-texture-header-website-vector-abstract-graphic-design-banner-pattern-background-template_181182-16317.jpg); */
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
-            height: 400px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -70,22 +73,61 @@
 
         .form-container form{
             display: flex;
-            column-gap: 10px;
-            border: 1px solid black;
-            width: 100%;
+            flex-direction: column;
+            width: 600px;
             margin: auto;
-            height: 50px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+    
         }
 
         .form-container form input, .form-container form select{
-            height: 50px;
+            width: 250px;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 10px;
+            display: block;
         }
 
-        .buyticketsHeader{
-            background-color: grey;
+        .form-container form select{
+            width: 270px;
         }
-        
+
+
+        .tickets h1,input,select,button{
+            font-family:'IBM Plex Mono', monospace;;
+        }
+
+        /* Pjesa e submitit te biletes */
+        .payment-icon{
+            margin-left: 100px;
+            margin-right: 20px;
+        }
+
+        .submitticket button{
+            width: 250px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 175px;
+
+        }
+
+        .submitticket button:hover{
+            background-color: #145b97;
+        }
+
+
+
     </style>
 
 </head>
@@ -110,18 +152,18 @@
     <div class="tickets">
         <h1>Blej tani bileten</h1>
         <div class="form-container">
-            <form action="">
+            <form action="" id="ticketForm">
                 <div class="name">
-                    <input type="name" placeholder="Add name"><br>
+                    <input type="text" id="name" placeholder="Add name"><br>
                 </div><br>
                 <div class="surname">
-                    <input type="surname" placeholder="Add surname"><br>
+                    <input type="text" id="surname" placeholder="Add surname"><br>
                 </div><br>
                 <div class="email">
-                    <input type="email" placeholder="Add email"><br>
+                    <input type="email" id="email" placeholder="Add email"><br>
                 </div><br>
                 <div class="select-container">
-                    <select name="select" id="">
+                    <select name="select" id="select">
                         <option value="Choose">Choose place</option>
                         <option value="Prishtina">Berlin</option>
                         <option value="New York">New York</option>
@@ -129,10 +171,20 @@
                         <option value="London">London</option>
                     </select>
                 </div><br>
+
                 <div class="date">
                     <input type="date" id="date" name="date" placeholder="Add date" required><br>
                 </div><br>
-                <button type="submit">Submit</button>
+
+                <div class="payment-icon">
+                    <img src="./images/kartela1.jfif" width="60px" height="40px" alt="">
+                    <img src="./images/kartela2.png" width="60px" height="40px" alt="">
+                </div>
+
+                <div class="submitticket">
+                    <button type="submit" id="submitButton">Submit</button>
+                </div>
+
             </form>
         </div>
     </div>
@@ -141,7 +193,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-section foot1">
-            <h1>MCED Footer</h1>
+            <h3>Festival Tickets</h3>
             <div class="line"></div>
         </div>
         <div class="footer-section foot2">
@@ -160,9 +212,35 @@
             <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
             <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
         </div>
-            <p>Support:jdjshdfsj@gmail.com</p>
+            <p>Support: onlinetickets@gmail.com</p>
     </div>
     </div>
 </footer>
+
+
+<script>
+    document.getElementById('submitButton').addEventListener('click',function(){
+        var name = document.getElementById('name').value;
+        var surname = document.getElementById('surname').value;
+        var email = document.getElementById('email').value;
+        var select = document.getElementById('select').value;
+        var date = document.getElementById('date').value;
+
+        var message = "";
+        message += "Bileta juaj\n";
+        message += "-Emri: " + name + "\n";
+        message += "-Mbiemri: " + surname + "\n";
+        message += "-Email: " + email + "\n";
+        message += "-Qyteti: " + select + "\n";
+        message += "-Data:" + date;
+
+        alert(message);
+    });
+
+    document.getElementById('ticketForm').addEventListener('submit',function(event){
+        event.preventDefault();
+    })
+</script>
+
 </body>
 </html>
