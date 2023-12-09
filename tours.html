@@ -237,29 +237,32 @@
 </head>
 <body>
 
-    <header class="tours"> 
+    <header> 
         <div class="header">
-            <a href="index.html">
-                <img src="logo.png" id="logo">
-            </a>
-        </div>
-        <ul class="">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/logo.png" id="logo">
+                </a>
+            </div>
+       
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
-            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.html">Buy Tickets</a></li>
          </ul>
+        </div>
     </header>
 
     <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
 
     <section class="image-slider">
         <div class="arrow-left">
-            <img src="left-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/left-arrow.png" width="30px" height="30px" alt="">
         </div>
 
         <div class="arrow-right">
-            <img src="right-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption">
             <h1>New York,USA</h1>
@@ -270,11 +273,11 @@
 
     <section class="image-slider2">
         <div class="arrow-left2">
-            <img src="left-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/left-arrow.png" width="30px" height="30px" alt="">
         </div>
 
         <div class="arrow-right2">
-            <img src="right-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption2">
             <h1>New York,USA</h1>
@@ -285,11 +288,11 @@
 
     <section class="image-slider3">
         <div class="arrow-left3">
-            <img src="left-arrow.png" width="30px" height="30px" alt="">
+            <img src="l./images/eft-arrow.png" width="30px" height="30px" alt="">
         </div>
 
         <div class="arrow-right3">
-            <img src="right-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption3">
             <h1>New York,USA</h1>
@@ -299,34 +302,29 @@
 
 
     <footer>
-        <div class="f">
-            <h2>footer(mi ndrru)</h2>
-            <h2>Our Links</h2>
-            <div class="ff">
-                <a href=""><img src="facebook.png" alt=""></a>
-                <a href=""><img src="twitter.png" alt=""></a>
-                <a href=""><img src="instagram.png" alt=""></a>
-                <a href=""><img src="pinterest.png" alt=""></a>
+        <div class="footer-container">
+            <div class="footer-section foot1">
+                <h1>MCED Footer</h1>
+                <div class="line"></div>
             </div>
+            <div class="footer-section foot2">
+                <ul class="aboutfooter">
+                    <li>About</li>
+                    <li>Benefits</li>
+                    <li>Career</li>
+                    <li>Support</li>
+                </ul>
+                <h5>&copy; 2023 Alb&Lorik.All right reserved</h5>
+            </div>
+            <div class="footer-section foot3">
+                <div class="social-icons">
+                <img src="./images/insta-icon.svg" >
+                <img src="./images/fb-icon.svg" alt="">
+                <img src="./images/twitter-icon.svg" alt="">
+                <img src="./images/spotify.svg" alt="">
+            </div>
+                <p>Support:jdjshdfsj@gmail.com</p>
         </div>
-        <div class="footermain">
-            <div class="footerleft">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum voluptatibus quam facilis. Culpa qui aspernatur nisi autem saepe laudantium praesentium vel nihil cupiditate id a ratione sequi, accusantium placeat.</p>
-            </div>
-            <div class="footercenter">
-                <p>Advertise</p>
-                <p>Support</p>
-                <p>Our Company</p>
-                <p>Contact</p>
-            </div>
-            <div class="footerright">
-                <p>Terms of use</p>
-                <p>Privacy Policy</p>
-            </div>
-        </div>
-        <div class="fundi">
-            <p>Copyright 2020 Catalog-Z Company. All rights reserved.</p>
-            <p>Designed by TemplateMo</p>
         </div>
     </footer>
 
@@ -339,7 +337,7 @@
         const description = document.querySelector('.caption p');
 
         const images = [
-            "Astroworld.jpg","foto18.jpg","foto6.jpg"
+            "./images/Astroworld.jpg","./images/foto18.jpg","./images/foto6.jpg"
         ];
 
         const headings = [
@@ -397,7 +395,7 @@
         const description2 = document.querySelector('.caption2 p');
 
         const images2 = [
-            "rodeoCover.jpg","foto10.jpg","foto3.jpg"
+            "./images/rodeoCover.jpg","./images/foto10.jpg","./images/foto3.jpg"
         ];
 
         const headings2 = [
@@ -454,7 +452,7 @@
         const description3 = document.querySelector('.caption3 p');
 
         const images3 = [
-            "rodeoCover.jpg","foto10.jpg","foto3.jpg"
+            "./images/rodeoCover.jpg","./images/foto10.jpg","./images/foto3.jpg"
         ];
 
         const headings3 = [

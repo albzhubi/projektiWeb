@@ -7,7 +7,7 @@ body{
     margin: 0;
 }  
 header.home {
-    background-image: url(foto3.jpg);
+    background-image: url(./images/foto3.jpg);
     background-size:cover;  
     background-repeat: no-repeat;
     background-position: top;
