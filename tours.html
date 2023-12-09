@@ -13,8 +13,8 @@
             background: #000;
         }
         .image-slider{
-            margin-top: 50px;
-            height: 600px;
+            width: 40%;
+            height: 350px;
             position: relative;
             background-image: url(Astroworld.jpg);
             background-repeat: no-repeat;
@@ -24,6 +24,7 @@
         }
         .image-slider * {
             box-sizing: border-box;
+            
         }
 
         .caption{
@@ -81,6 +82,156 @@
             width: 80px;
             height: 45px;
         } 
+        .image-slider2 {
+            height: 600px;
+            margin-top: 20px; /* Adjust the margin as needed */
+            position: relative;
+            background-image: url(Astroworld.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: 0.3s;
+        }
+
+        .image-slider2 * {
+            box-sizing: border-box;
+        }
+
+        .caption2 {
+            background: linear-gradient(rgba(0, 0, 0, 0), #000);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 4em 1em 2em 1em;
+            text-align: center;
+        }
+
+        .caption2 h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .caption2 p {
+            color: #8a8a8a;
+        }
+
+        .arrow-left2,
+        .arrow-right2 {
+            background: #fff;
+            position: absolute;
+            top: 40%;
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .arrow-left2:hover,
+        .arrow-right2:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .arrow-left2 {
+            left: 1em;
+        }
+
+        .arrow-right2 {
+            right: 1em;
+        }
+
+        .image-fade2 {
+            animation: imgFade2 0.5s ease-in-out;
+        }
+
+        @keyframes imgFade2 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .image-slider3 {
+            height: 600px;
+            margin-top: 20px; /* Adjust the margin as needed */
+            position: relative;
+            background-image: url(rodeoCover.jpg); /* Change the image source as needed */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: 0.3s;
+        }
+
+        .image-slider3 * {
+            box-sizing: border-box;
+        }
+
+        .caption3 {
+            background: linear-gradient(rgba(0, 0, 0, 0), #000);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 4em 1em 2em 1em;
+            text-align: center;
+        }
+
+        .caption3 h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .caption3 p {
+            color: #8a8a8a;
+        }
+
+        .arrow-left3,
+        .arrow-right3 {
+            background: #fff;
+            position: absolute;
+            top: 40%;
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .arrow-left3:hover,
+        .arrow-right3:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .arrow-left3 {
+            left: 1em;
+        }
+
+        .arrow-right3 {
+            right: 1em;
+        }
+
+        .image-fade3 {
+            animation: imgFade3 0.5s ease-in-out;
+        }
+
+        @keyframes imgFade3 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 
 </head>
@@ -111,6 +262,36 @@
             <img src="right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption">
+            <h1>New York,USA</h1>
+            <p>The city that never sleeps</p>
+        </div>
+    </section>
+
+
+    <section class="image-slider2">
+        <div class="arrow-left2">
+            <img src="left-arrow.png" width="30px" height="30px" alt="">
+        </div>
+
+        <div class="arrow-right2">
+            <img src="right-arrow.png" width="30px" height="30px" alt="">
+        </div>
+        <div class="caption2">
+            <h1>New York,USA</h1>
+            <p>The city that never sleeps</p>
+        </div>
+    </section>
+
+
+    <section class="image-slider3">
+        <div class="arrow-left3">
+            <img src="left-arrow.png" width="30px" height="30px" alt="">
+        </div>
+
+        <div class="arrow-right3">
+            <img src="right-arrow.png" width="30px" height="30px" alt="">
+        </div>
+        <div class="caption3">
             <h1>New York,USA</h1>
             <p>The city that never sleeps</p>
         </div>
@@ -204,6 +385,121 @@
             }
 
             slide(id);
+         })
+
+    </script>
+
+    <script>
+        const slider2 = document.querySelector('.image-slider2');
+        const arrLeft2 = document.querySelector('.arrow-left2');
+        const arrRight2 = document.querySelector('.arrow-right2');
+        const heading2 = document.querySelector('.caption2 h1');
+        const description2 = document.querySelector('.caption2 p');
+
+        const images2 = [
+            "rodeoCover.jpg","foto10.jpg","foto3.jpg"
+        ];
+
+        const headings2 = [
+            "New York","Tokyo","Japan","Dubai","UAE"
+        ];
+
+        const descriptions2 = [
+            "The city that never sleeps",
+            "The city of lights",
+            "Home to the tallest skyscraper",
+        ];
+
+        let id2 = 0;
+
+        function slide2(id2) {
+            slider2.style.backgroundImage = `url(${images2[id2]})`;
+
+            slider2.classList.add('image-fade');
+
+            setTimeout(() => {
+                slider2.classList.remove('image-fade');
+            },550);
+
+            heading2.innerText = headings2[id2];
+            description2.innerText = descriptions2[id2];
+         }
+
+        arrLeft2.addEventListener('click',()=>{
+            id2--;
+            if(id2<0){
+                id2 = images2.length - 1;
+            }
+
+            slide2(id2);
+
+         });
+
+         arrRight2.addEventListener('click',() => {
+            id2++;
+
+            if(id2 > images2.length - 1){
+                id2 = 0;
+            }
+
+            slide2(id2);
+         })
+    </script>
+
+    <script>
+        const slider3 = document.querySelector('.image-slider3');
+        const arrLeft3 = document.querySelector('.arrow-left3');
+        const arrRight3 = document.querySelector('.arrow-right3');
+        const heading3 = document.querySelector('.caption3 h1');
+        const description3 = document.querySelector('.caption3 p');
+
+        const images3 = [
+            "rodeoCover.jpg","foto10.jpg","foto3.jpg"
+        ];
+
+        const headings3 = [
+            "New York","Tokyo","Japan","Dubai","UAE"
+        ];
+
+        const descriptions3 = [
+            "The city that never sleeps",
+            "The city of lights",
+            "Home to the tallest skyscraper",
+        ];
+
+        let id3 = 0;
+
+        function slide3(id3) {
+            slider3.style.backgroundImage = `url(${images3[id3]})`;
+
+            slider3.classList.add('image-fade');
+
+            setTimeout(() => {
+                slider3.classList.remove('image-fade');
+            },550);
+
+            heading3.innerText = headings3[id3];
+            description3.innerText = descriptions2[id3];
+         }
+
+        arrLeft3.addEventListener('click',()=>{
+            id3--;
+            if(id3<0){
+                id3 = images3.length - 1;
+            }
+
+            slide3(id3);
+
+         });
+
+         arrRight3.addEventListener('click',() => {
+            id3++;
+
+            if(id3 > images3.length - 1){
+                id3 = 0;
+            }
+
+            slide3(id3);
          })
     </script>
     
