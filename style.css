@@ -76,11 +76,17 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.footer-section{
+    flex-basis: 33.3%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container{
+    display: flex;
     justify-content: space-between;
-
+    width: 100%;
 }
-.nav-footer li{
-    display: inline;
-    font-size: 20px
 
-}
