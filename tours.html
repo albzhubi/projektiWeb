@@ -10,17 +10,19 @@
         body{
             margin: 0;
             font-family: 'IBM Plex Mono', monospace;
-            background: #000;
+            background-color: grey;
         }
         .image-slider{
             width: 40%;
             height: 350px;
             position: relative;
-            background-image: url(Astroworld.jpg);
+            background-image: url(./images/Astroworld.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             transition: 0.3s;
+            margin-top: 30px;
+            margin-bottom: 50px;
         }
         .image-slider * {
             box-sizing: border-box;
@@ -83,14 +85,18 @@
             height: 45px;
         } 
         .image-slider2 {
-            height: 600px;
-            margin-top: 20px; /* Adjust the margin as needed */
+            width: 40%;
+            height: 350px;
+            margin-top: 20px; 
             position: relative;
-            background-image: url(Astroworld.jpg);
+            background-image: url(./images/Astroworld.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             transition: 0.3s;
+            margin-bottom: 50px;
+
+            float: right;
         }
 
         .image-slider2 * {
@@ -158,14 +164,19 @@
             }
         }
         .image-slider3 {
-            height: 600px;
+            width: 40%;
+            height: 350px;
             margin-top: 20px; /* Adjust the margin as needed */
             position: relative;
-            background-image: url(rodeoCover.jpg); /* Change the image source as needed */
+            background-image: url(./images/rodeoCover.jpg); /* Change the image source as needed */
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             transition: 0.3s;
+            margin-bottom: 50px;
+
+            float: none;
+            clear: both;
         }
         
         .image-slider3 * {
@@ -254,7 +265,7 @@
         </div>
     </header>
 
-    <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+    <!-- <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a> -->
 
     <section class="image-slider">
         <div class="arrow-left">
@@ -309,19 +320,19 @@
             </div>
             <div class="footer-section foot2">
                 <ul class="aboutfooter">
-                    <li>About</li>
-                    <li>Benefits</li>
-                    <li>Career</li>
-                    <li>Support</li>
+                    <a href="index.html"><li>Home</li></a>
+                  <a href="tours.html"><li>Tours</li></a>
+                   <a href="https://shop.travisscott.com/"><li>Store</li></a>
+                   <a href="buytickets.html"><li>Buy Tickets</li></a>
                 </ul>
                 <h5>&copy; 2023 Alb&Lorik.All right reserved</h5>
             </div>
             <div class="footer-section foot3">
                 <div class="social-icons">
-                <img src="./images/insta-icon.svg" >
-                <img src="./images/fb-icon.svg" alt="">
-                <img src="./images/twitter-icon.svg" alt="">
-                <img src="./images/spotify.svg" alt="">
+                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
+                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
+                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
+                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
             </div>
                 <p>Support:jdjshdfsj@gmail.com</p>
         </div>

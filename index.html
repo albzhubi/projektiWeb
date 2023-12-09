@@ -64,7 +64,84 @@
             font-family: 'Montserrat', sans-serif;
             display: flex;
             justify-content: center;    
+        }      
+
+
+          /* Pjesa e countdown */
+          *{
+            box-sizing: border-box;
         }
+        .countdown-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 70vh;
+            font-family: 'IBM Plex Mono', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        h1{
+            margin-top: 100px;
+            font-size: 4rem;
+            color: black;
+            text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+            0px -4px 10px rgba(255, 255, 255, 0.3)
+        }
+        .countdown-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            border-bottom: 1px solid black;
+            padding-bottom: 40px;
+
+        }
+
+        .countdown-box{
+            display: flex;
+            justify-self: center;
+        }
+
+        .text{
+            font-weight: bold;
+            font-size: 6rem;
+            line-height: 1;
+            margin: 1rem 2rem;
+            text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+            0px -4px 10px rgba(255, 255, 255, 0.3)
+        }
+
+        .countdown-first{
+            text-align: center;
+        }
+        .countdown-first span{
+            font-size: 1.3rem;
+            text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+            0px -4px 10px rgba(255, 255, 255, 0.3)
+        }     
+
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px; 
+            padding: 40px;    
+            border: none;
+            border-radius: 20px;    
+  
+        }
+        .buyticketsbutton{
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+            color: green;
+            margin-left: 40px;
+
+
+        }          
         
       
     </style>
@@ -91,10 +168,42 @@
                 <h1>Utopia Tours</h1>
                 <h3>Presents Circus Maximus</h3>
             </div>
-            <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
         </div>
     </header>
     <main>
+
+        <div class="countdown-container">
+            <h1>Till the next concert</h1>
+    
+            <div class="countdown-box">
+                <div class="countdown-el days">
+                    <p class="text" id="days">0</p>
+                    <span>days</span>
+                </div>
+    
+                <div class="countdown-el hours">
+                    <p class="text" id="hours">0</p>
+                    <span>hours</span>
+                </div>
+    
+                <div class="countdown-el mins">
+                    <p class="text" id="mins">0</p>
+                    <span>minutes</span>
+                </div>
+    
+                <div class="countdown-el seconds">
+                    <p class="text" id="seconds">0</p>
+                    <span>seconds</span>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+                <a href="tours.html"><button type="submit" class="buyticketsbutton">Look at other tours</button></a>
+            </div>
+
+        </div>
+
         <div class="main5">  
             <div class="discography">
                 <h1>Discography</h1>
@@ -148,24 +257,62 @@
             </div>
             <div class="footer-section foot2">
                 <ul class="aboutfooter">
-                    <li>About</li>
-                    <li>Benefits</li>
-                    <li>Career</li>
-                    <li>Support</li>
+                    <a href="index.html"><li>Home</li></a>
+                  <a href="tours.html"><li>Tours</li></a>
+                   <a href="https://shop.travisscott.com/"><li>Store</li></a>
+                   <a href="buytickets.html"><li>Buy Tickets</li></a>
                 </ul>
                 <h5>&copy; 2023 Alb&Lorik.All right reserved</h5>
             </div>
             <div class="footer-section foot3">
                 <div class="social-icons">
-                <img src="./images/insta-icon.svg" >
-                <img src="./images/fb-icon.svg" alt="">
-                <img src="./images/twitter-icon.svg" alt="">
-                <img src="./images/spotify.svg" alt="">
+                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
+                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
+                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
+                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
             </div>
                 <p>Support:jdjshdfsj@gmail.com</p>
         </div>
         </div>
     </footer>
+
+
+    <script>
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minsEl = document.getElementById("mins");
+        const secondsEl = document.getElementById("seconds");
+
+        const newYears = "1 Jan 2024";
+
+        function countdown() {
+            const newYearsDate = new Date(newYears);
+            const currentDate = new Date();
+
+            const totalSeconds = (newYearsDate - currentDate) / 1000;
+
+            const days = Math.floor(totalSeconds / 3600 / 24);
+            const hours = Math.floor(totalSeconds / 3600) % 24;
+            const mins = Math.floor(totalSeconds / 60) % 60;
+            const seconds = Math.floor(totalSeconds) % 60;
+
+            daysEl.innerHTML = days;
+            hoursEl.innerHTML = formatTime(hours);
+            minsEl.innerHTML = formatTime(mins);
+            secondsEl.innerHTML = formatTime(seconds);
+        }
+
+        function formatTime(time){
+            return time < 10 ? `0${time}` : time;
+        }
+
+        countdown();
+
+        setInterval(countdown,1000);
+
+    </script>
+
 
     
 </body>

@@ -6,6 +6,10 @@ body{
     padding: 0;
     margin: 0;
 }  
+a{
+    color: inherit;
+    text-decoration: none;
+}
 header.home {
     background-image: url(./images/foto3.jpg);
     background-size:cover;  
@@ -40,7 +44,7 @@ header.home:before{
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100.5%;
+    height: 700px;
     background-color: rgba(0, 0, 0, 0.5);   
 }
 
@@ -148,3 +152,5 @@ footer{
 .foot3 .social-icons img{
     width: 20px;
 }
+
+
