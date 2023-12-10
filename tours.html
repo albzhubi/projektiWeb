@@ -16,7 +16,7 @@
             width: 40%;
             height: 350px;
             position: relative;
-            background-image: url(./images/Astroworld.jpg);
+            background-image: url(./images/utopia1.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -89,7 +89,7 @@
             height: 350px;
             margin-top: 20px; 
             position: relative;
-            background-image: url(./images/Astroworld.jpg);
+            background-image: url(./images/astroworld1.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -166,9 +166,9 @@
         .image-slider3 {
             width: 40%;
             height: 350px;
-            margin-top: 20px; /* Adjust the margin as needed */
+            margin-top: 20px;
             position: relative;
-            background-image: url(./images/rodeoCover.jpg); /* Change the image source as needed */
+            background-image: url(./images/birdeyeview1.png); 
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -277,7 +277,6 @@
         </div>
         <div class="caption">
             <h1>New York,USA</h1>
-            <p>The city that never sleeps</p>
         </div>
     </section>
 
@@ -292,14 +291,13 @@
         </div>
         <div class="caption2">
             <h1>New York,USA</h1>
-            <p>The city that never sleeps</p>
         </div>
     </section>
 
 
     <section class="image-slider3">
         <div class="arrow-left3">
-            <img src="l./images/eft-arrow.png" width="30px" height="30px" alt="">
+            <img src="l./images/left-arrow.png" width="30px" height="30px" alt="">
         </div>
 
         <div class="arrow-right3">
@@ -307,7 +305,6 @@
         </div>
         <div class="caption3">
             <h1>New York,USA</h1>
-            <p>The city that never sleeps</p>
         </div>
     </section>
 
@@ -325,7 +322,7 @@
                    <a href="https://shop.travisscott.com/"><li>Store</li></a>
                    <a href="buytickets.html"><li>Buy Tickets</li></a>
                 </ul>
-                <h5>&copy; 2023 Alb&Lorik.All right reserved</h5>
+                <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
             </div>
             <div class="footer-section foot3">
                 <div class="social-icons">
@@ -345,20 +342,14 @@
         const arrLeft = document.querySelector('.arrow-left');
         const arrRight = document.querySelector('.arrow-right');
         const heading = document.querySelector('.caption h1');
-        const description = document.querySelector('.caption p');
+
 
         const images = [
-            "./images/Astroworld.jpg","./images/foto18.jpg","./images/foto6.jpg"
+            "./images/utopia1.jpg","./images/utopia2.png","./images/utopia3.jpg"
         ];
 
         const headings = [
             "New York","Tokyo","Japan","Dubai","UAE"
-        ];
-
-        const descriptions = [
-            "The city that never sleeps",
-            "The city of lights",
-            "Home to the tallest skyscraper",
         ];
 
         let id = 0;
@@ -373,7 +364,6 @@
             },550);
 
             heading.innerText = headings[id];
-            description.innerText = descriptions[id];
          }
 
          arrLeft.addEventListener('click',()=>{
@@ -403,21 +393,15 @@
         const arrLeft2 = document.querySelector('.arrow-left2');
         const arrRight2 = document.querySelector('.arrow-right2');
         const heading2 = document.querySelector('.caption2 h1');
-        const description2 = document.querySelector('.caption2 p');
 
         const images2 = [
-            "./images/rodeoCover.jpg","./images/foto10.jpg","./images/foto3.jpg"
+            "./images/astroworld1.jpg","./images/astroworld2.webp","./images/astroworld3.jpg"
         ];
 
         const headings2 = [
             "New York","Tokyo","Japan","Dubai","UAE"
         ];
 
-        const descriptions2 = [
-            "The city that never sleeps",
-            "The city of lights",
-            "Home to the tallest skyscraper",
-        ];
 
         let id2 = 0;
 
@@ -431,7 +415,6 @@
             },550);
 
             heading2.innerText = headings2[id2];
-            description2.innerText = descriptions2[id2];
          }
 
         arrLeft2.addEventListener('click',()=>{
@@ -460,20 +443,14 @@
         const arrLeft3 = document.querySelector('.arrow-left3');
         const arrRight3 = document.querySelector('.arrow-right3');
         const heading3 = document.querySelector('.caption3 h1');
-        const description3 = document.querySelector('.caption3 p');
+
 
         const images3 = [
-            "./images/rodeoCover.jpg","./images/foto10.jpg","./images/foto3.jpg"
+            "./images/birdseyeview1.png","./images/birdseyeview2.png","./images/birdseyeview3.jpg"
         ];
 
         const headings3 = [
             "New York","Tokyo","Japan","Dubai","UAE"
-        ];
-
-        const descriptions3 = [
-            "The city that never sleeps",
-            "The city of lights",
-            "Home to the tallest skyscraper",
         ];
 
         let id3 = 0;
@@ -488,7 +465,6 @@
             },550);
 
             heading3.innerText = headings3[id3];
-            description3.innerText = descriptions2[id3];
          }
 
         arrLeft3.addEventListener('click',()=>{
