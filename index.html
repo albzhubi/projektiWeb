@@ -9,6 +9,10 @@
         /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
 
+        .header-desc{
+            z-index: 999;
+        }
+
         .welcome{
             display: flex;
             flex-direction: column;
@@ -27,6 +31,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             padding-left: 80px; 
+            z-index: 9999;
 
         }
         .welcome h3{
@@ -35,6 +40,7 @@
             align-items: flex-start;
             padding-left: 80px;
             margin-top: -50px;
+            z-index: 9999;
 
         }
         
@@ -154,7 +160,7 @@
 </head>
 <body>
     <header class="home"> 
-        <div class="header ">
+        <div class="header">
             <div class="logo">
                 <a href="index.html">
                      <img src="./images/logo4.png" width="40px" height="40px" id="logo"> 
@@ -168,7 +174,7 @@
             <li><a href="login.html">Buy Tickets</a></li>
          </ul>
         </div>
-        <div class="home">
+        <div class="header-desc">
             <div class="welcome">
                 <h1>Utopia Tours</h1>
                 <h3>Presents Circus Maximus</h3>
@@ -271,7 +277,7 @@
                     <a href="index.html"><li>Home</li></a>
                   <a href="tours.html"><li>Tours</li></a>
                    <a href="https://shop.travisscott.com/"><li>Store</li></a>
-                   <a href="buytickets.html"><li>Buy Tickets</li></a>
+                   <a href="login.html"><li>Buy Tickets</li></a>
                 </ul>
                 <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
             </div>
