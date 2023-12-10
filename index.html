@@ -6,8 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap');
-           
+        /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
+
         .welcome{
             display: flex;
             flex-direction: column;
@@ -15,7 +16,7 @@
             align-items: flex-start;
             align-content: flex-start;
             padding-top: 150px;            
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: rgba(255, 255, 255, 0.9);
             font-weight: bold;
             font-size: 40px;
@@ -52,7 +53,7 @@
         }
         .fototEAlbumeve{
             width: 20%;
-            margin: 80px;
+            margin: 40px;
 
         }
         .fototEAlbumeve img {
@@ -61,9 +62,10 @@
             border-radius: 20px;
         }
         .discography{
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
+            margin-bottom: 50px;
                 
         }      
 
@@ -77,7 +79,7 @@
             flex-direction: column;
             align-items: center;
             min-height: 70vh;
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 20px;
         }
@@ -132,15 +134,20 @@
         }
         .buyticketsbutton{
             font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 800;
             border: none;
             border-radius: 20px;
             padding: 10px;
             cursor: pointer;
-            color: green;
+            color: black;
             margin-left: 40px;
-        }          
+        }      
+        
+        .album-title,
+        .album-description{
+            font-family: 'Poppins', sans-serif;
+        }
       
     </style>
 
@@ -196,7 +203,7 @@
             </div>
 
             <div class="button-container">
-                <a href="buytickets.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+                <a href="login.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
                 <a href="tours.html"><button type="submit" class="buyticketsbutton">Other Tours</button></a>
             </div>
 
@@ -210,37 +217,43 @@
                 <div class="fototEAlbumeve">
                     <div class="utopia"> 
                         <a href="https://music.apple.com/us/album/utopia/1699712635" target="_blank"> <img src="./images/utopia.jpg" alt=""></a> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">Utopia</h1>
+                        <p class="album-description">Utopia is the fourth studio album by American rapper Travis Scott. It was released through Cactus Jack and Epic Records on July 28, 2023. </p>
                     </div>
                 </div>
                 <div class="fototEAlbumeve">
                     <div class="jackboys">
                         <a href="https://music.apple.com/us/album/jackboys/1492785997" target="_blank"> <img src="./images/jackboysCover.jpg" alt=""></a> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">JackBoys</h1>
+                        <p class="album-description">JackBoys is a collaborative compilation album by American record label Cactus Jack Records, under the name JackBoys, led by American rapper and singer Travis Scott. </p>
                     </div>
                 </div>
                 <div class="fototEAlbumeve">
                     <div class="astroworld"> 
                         <a href="https://music.apple.com/us/album/astroworld/1421241217" target="_blank"> <img src="./images/astroworld.jpg" alt=""></a> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">Astroworld</h1>
+                        <p class="album-description">Astroworld  is the third studio album by American rapper Travis Scott. It was released on August 3, 2018, through Cactus Jack Records and Grand Hustle Records, and distributed by Epic Records.</p>
                     </div>
                 </div>
                 <div class="fototEAlbumeve">
                     <div class="hunchoJack">
                         <a href="https://music.apple.com/us/album/huncho-jack-jack-huncho/1440902652" target="_blank" > <img src="./images/hunchoJackCover.jpg" alt=""></a> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">HunchoJack</h1>
+                        <p class="album-description">Huncho Jack, Jack Huncho is the debut studio album by American hip hop duo Huncho Jack, which consists of American rappers Travis Scott and Quavo. </p>
                     </div>
                 </div>
                 <div class="fototEAlbumeve">
                     <div class="birdsInTheTrap">
                         <a href="https://music.apple.com/us/album/birds-in-the-trap-sing-mcknight/1150135681" target="_blank" > <img src="./images/birdsInTheTrapCover.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">Birds In The Trap</h1>
+                        <p class="album-description">Birds in the Trap Sing McKnight is the second studio album by American rapper Travis Scott. It was released on September 2, 2016, through Grand Hustle Records and distributed by Epic Records. </p>
                     </div>
                 </div>
                 <div class="fototEAlbumeve">
                     <div class="rodeo">
                         <a href="https://music.apple.com/us/album/rodeo/1456176981" target="_blank" > <img src="./images/rodeoCover.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <h1 class="album-title">Rodeo</h1>
+                        <p class="album-description">Rodeo is the debut studio album by American rapper and record producer Travis Scott. It was released on September 4, 2015, through Grand Hustle Records and distributed by Epic Records.</p>
                     </div>
                 </div>
             </div>

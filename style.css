@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Open+Sans:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Open+Sans:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
 
 body{
-    background-color: #FFFFFF;
+    background-color: white;
     padding: 0;
     margin: 0;
 }  
@@ -58,7 +59,7 @@ header li{
     color: white;
     display: inline;
     font-size: 22px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
 }
 header a{
     color: inherit;
@@ -73,12 +74,18 @@ header a{
     max-width: 80%;
     width: 100%;
     margin: auto;
+    background-color: white;
 }
 footer{
-    background-color : #F5F5F5;
+    background-color : #e0e0e0;
     padding: 50px 0px;
     width: 100%;
-
+}
+footer p{
+    font-family: 'Poppins', sans-serif;
+}
+.footer-section.foot2 {
+    font-family: 'Poppins', sans-serif;
 }
 .footer-section{
 
@@ -95,7 +102,8 @@ footer{
 .foot1{
     flex: 0.5;
     justify-content: space-between;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+
 
 }
 

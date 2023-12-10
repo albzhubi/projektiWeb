@@ -7,11 +7,59 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
         body{
             margin: 0;
-            font-family: 'IBM Plex Mono', monospace;
-            background-color: grey;
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
         }
+        /* pjesa per descriptions */
+        .description1{
+            height: 150px;
+            text-align: center;
+            padding: 0 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-85%);
+            right: 0;
+            width: 55%;
+            color: #fff;
+        }
+        .description1 p{
+            color: black;
+            
+        }
+        .description2{
+            width: 53%;
+            text-align: left;
+            padding: 0 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            margin-top: 350px;
+        }
+        .description2 p{
+            color: black;
+        }
+        .description3{
+            width: 53%;
+            text-align: right;
+            padding: 0 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(225%);
+        }
+        .description3 p{
+            color: black;
+        }
+        .description1, .description2, .description3{
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 20px;
+        }
+        /* pjesa per sliderin */
         .image-slider{
             width: 40%;
             height: 350px;
@@ -281,9 +329,12 @@
             <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption">
-            <h1>New York,USA</h1>
+            <h1>UTOPIA</h1>
         </div>
     </section>
+    <div class="description1">
+        <p>The Circus Maximus Tour, also branded and promoted as Utopia Tour Presents Circus Maximus, is the ongoing fourth concert tour by American rapper and singer Travis Scott, in support of his fourth studio album, Utopia (2023). Fellow American singer Teezo Touchdown serves as the opening act of the tour, which is Scott's first concert tour in five years and his first tour since the Astroworld Festival crowd crush. The tour started on October 11, 2023, at the Spectrum Center in Charlotte, North Carolina, and will end on January 31, 2024, at the Amway Center in Orlando, Florida.</p>
+    </div>
 
 
     <section class="image-slider2">
@@ -295,23 +346,30 @@
             <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption2">
-            <h1>New York,USA</h1>
+            <h1>ASTROWORLD</h1>
         </div>
     </section>
+    <div class="description2">
+        <p>The Astroworld – Wish You Were Here Tour was the third concert tour by American rapper Travis Scott, in support of his third studio album Astroworld (2018). The tour began in Baltimore at Royal Farms Arena on November 8, 2018.
+            The tour was officially announced via Scott's Instagram on August 16, 2018. Scott announced "Ive Been Ready To Get Back On Road For A Long Time!! Astroworld Tour Is Finally Here!!". In August 2018, prior to the start of the tour, Scott announced via Instagram "this is leg one Europe and other cities coming soon". At the start of the tour, Scott announced "more dates TBS". Scott also announced that Virgil Abloh, Sheck Wes, Trippie Redd, and Gunna would perform opening acts.</p>
+    </div>
 
 
     <section class="image-slider3">
         <div class="arrow-left3">
-            <img src="l./images/left-arrow.png" width="30px" height="30px" alt="">
+            <img src="./images/left-arrow.png" width="30px" height="30px" alt="">
         </div>
 
         <div class="arrow-right3">
             <img src="./images/right-arrow.png" width="30px" height="30px" alt="">
         </div>
         <div class="caption3">
-            <h1>New York,USA</h1>
+            <h1>BIRDS EYE VIEW</h1>
         </div>
     </section>
+    <div class="description3">
+        <p>Santa Barbara was the first stop on Travis Scott’s Bird’s Eye View tour, a mega-spectacle featuring state-of-the-art lights, heavy-metal-style smoke effects, and a gigantic mechanical bird with laser eyes. All of which raises the question: Is Scott rap’s next big thing, or is he just a new coat of feathers on the same old goose? A fast, confident rapper, Scott’s very up-to-date flow makes him a strong match with other hot artists like 2 Chainz and Future. Both men have verses on Scott’s best track, “3500,” which was also the best song of the concert.</p>
+    </div>
 
 
     <footer>
