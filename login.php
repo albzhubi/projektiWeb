@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,40 +60,27 @@
         button:hover{
             background-color: #145b97;
         }
-
         
         
     </style>
 </head>
 <body>
-    
+
     <div class="container">
-            <h1>REGISTER</h1>
-        <form action="" onsubmit="return validateForm(event)">
-            <div class="name">
-                <label for="">Emri</label><br>
-                <input type="name" id="name" name="name" required><br>
-            </div><br>
-            <div class="surname">
-                <label for="">Mbiemri</label><br>
-                <input type="surname" id="surname" name="surname" required><br>
-            </div><br>
+            <h1>LOGIN</h1>
+        <form action="" onsubmit=" return validateForm(event)">
             <div class="username">
-                <label for="">Username</label><br>
-                <input type="username" id="username" name="username" required><br>
-            </div><br>
-            <div class="email">
-                <label for="">Email</label><br>
-                <input type="email" id="email" name="email" required><br>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required><br>
             </div><br>
             <div class="password">
-                <label for="">Password</label><br>
-                <input type="password" id="password" name="password" required><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br>
             </div>
             <br>
             <button type="submit">Submit</button><br>
             <div class="create">
-                <p><a href="login.php">Jeni te regjistruar?</a></p>
+                <p><a href="register.html">Nuk jeni regjistruar ende? Regjistrohu</a></p>
             </div>
         </form>
     </div>
@@ -97,35 +88,15 @@
     <script>
         function validateForm(event){
             event.preventDefault();
-            let name = document.getElementById('name').value;
-            let surname = document.getElementById('surname').value;
             let username = document.getElementById('username').value;
-            let email = document.getElementById('email').value;
             let password = document.getElementById('password').value;
-
-            let nameRegex = /^[A-Z][a-z]{1,12}$/;
-            if(!nameRegex.test(name)){
-                alert('Please enter a valid name');
-                return false;
-            }
-            let surnameRegex = /^[A-Z][a-z]{1,12}$/;
-            if(!surnameRegex.test(surname)){
-                alert('Please enter a valid surname');
-                return false;
-            }
 
             let usernameRegex = /^[a-z]{1,12}$/;
             if(!usernameRegex.test(username)){
                 alert('Plase enter a valid username');
                 return false;
-            } 
-
-            let emailRegex = /^[a-zA-z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-            if(!emailRegex.test(email)){
-                alert('Please enter a valid email');
-                return false;
             }
-
+            
             let passwordRegex = /^[a-z]+[0-9]{1,8}$/;
             if(!passwordRegex.test(password)){
                 alert('Please enter a valid password');
@@ -135,9 +106,9 @@
                 alert('Password must be at least 6 characters');
                 return;
             } 
-
-            window.location.href = "login.php";
+            window.location.href = "buytickets.html";
         }
     </script>
+
 </body>
 </html>

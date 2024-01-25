@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,7 +176,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
-            <li><a href="login.php">Buy Tickets</a></li>
+            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.php">Log in</a></li>
          </ul>
         </div>
         <div class="header-desc">
