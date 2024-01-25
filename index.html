@@ -5,44 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQ54M235+F3c54G537653Ycu2aq54h5754u+d/c5Y1N5te5/l754xY454l54z54+545544" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
 
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
         .header-desc{
             z-index: 999;
         }
 
-        .welcome{
+        .welcome {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             align-content: flex-start;
-            padding-top: 150px;            
+            padding-top: 200px;
             font-family: 'Poppins', sans-serif;
             color: rgba(255, 255, 255, 0.9);
             font-weight: bold;
             font-size: 40px;
             z-index: 9999999999;
         }
+
         .welcome h1{
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            padding-left: 80px; 
+            padding-left: 140px; 
             z-index: 9999;
+            font-size: 70px;
 
         }
-        .welcome h3{
+        .welcome h3 {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            padding-left: 80px;
-            margin-top: -50px;
+            padding-left: 140px;
+            margin-top: 20px; 
+            font-size: 30px;
             z-index: 9999;
-
         }
+
         
         #logo{
             width: 150px;
@@ -154,6 +165,48 @@
         .album-description{
             font-family: 'Poppins', sans-serif;
         }
+
+
+      
+    @media only screen and (max-width: 750px) {
+        .nav-list {
+            display: none !important;
+        }
+
+
+
+        .dropdown {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+            z-index: 1001; 
+            margin-bottom: 0; 
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        .dropdown-toggle:focus {
+            outline: none;
+        }
+    }
+    @media only screen and (min-width: 750px) {
+        .dropdown{
+            display: none !important;
+        }
+    }
+
+
+
       
     </style>
 
@@ -171,14 +224,26 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
-            <li><a href="login.php">Buy Tickets</a></li>
+            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.html">Log in</a></li>
          </ul>
         </div>
         <div class="header-desc">
-            <div class="welcome">
-                <h1>Utopia Tours</h1>
-                <h3>Presents Circus Maximus</h3>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i> 
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="tours.html">Tours</a></li>
+                    <li><a class="dropdown-item" href="https://shop.travisscott.com/">Store</a></li>
+                    <li><a class="dropdown-item" href="buytickets.html">Buy tickets</a></li>
+                </ul>
             </div>
+            
+        </div>
+        <div class="welcome">
+            <h1>Utopia Tours</h1>
+            <h3>Presents Circus Maximus</h3>
         </div>
     </header>
     <main>
@@ -209,7 +274,7 @@
             </div>
 
             <div class="button-container">
-                <a href="login.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+                <a href="login.html"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
                 <a href="tours.html"><button type="submit" class="buyticketsbutton">Other Tours</button></a>
             </div>
 
@@ -277,7 +342,7 @@
                     <a href="index.html"><li>Home</li></a>
                   <a href="tours.html"><li>Tours</li></a>
                    <a href="https://shop.travisscott.com/"><li>Store</li></a>
-                   <a href="login.php"><li>Buy Tickets</li></a>
+                   <a href="login.html"><li>Buy Tickets</li></a>
                 </ul>
                 <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
             </div>
@@ -329,6 +394,7 @@
         setInterval(countdown,1000);
 
     </script>
+   
 
 
     
