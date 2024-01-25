@@ -6,7 +6,7 @@
       
         $username = $_POST['username'];
         $password = $_POST['password']; 
-        myslqi_connect($db, "INSERT into login(username, password, usertype) VALUES ('$username', '$password', 'user')");
+        myslqi_connect($conn, "INSERT into users(username, password, ) VALUES ('$username', '$password', 'user')");
     }
 ?>
 <!DOCTYPE html>
@@ -75,7 +75,7 @@
 
     <div class="container">
             <h1>LOGIN</h1>
-        <form action="" onsubmit=" return validateForm(event)">
+        <form action="config.php" method="POST" onsubmit=" return validateForm(event)">
             <div class="username">
                 <label for="username">Username</label><br>
                 <input type="text" id="username" name="username" required><br>
