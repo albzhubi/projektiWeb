@@ -1,6 +1,13 @@
 <?php
 
-
+    include("config.php" );
+    if(isset($_POST['submit'])){
+        session_start();
+      
+        $username = $_POST['username'];
+        $password = $_POST['password']; 
+        myslqi_connect($db, "INSERT into login(username, password, usertype) VALUES ('$username', '$password', 'user')");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +85,7 @@
                 <input type="password" id="password" name="password"><br>
             </div>
             <br>
-            <button type="submit">Submit</button><br>
+            <button type="submit" name="submit">Submit</button><br>
             <div class="create">
                 <p><a href="register.html">Nuk jeni regjistruar ende? Regjistrohu</a></p>
             </div>
@@ -106,7 +113,7 @@
                 alert('Password must be at least 6 characters');
                 return;
             } 
-            window.location.href = "buytickets.html";
+            // window.location.href = "index.php";
         }
     </script>
 

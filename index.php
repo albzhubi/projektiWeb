@@ -167,13 +167,13 @@
     <header class="home"> 
         <div class="header">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                      <img src="./images/logo4.png" width="40px" height="40px" id="logo"> 
                 </a>
             </div>
        
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
             <li><a href="https://shop.travisscott.com/">Store</a></li>
             <li><a href="buytickets.html">Buy Tickets</a></li>
@@ -280,7 +280,7 @@
             </div>
             <div class="footer-section foot2">
                 <ul class="aboutfooter">
-                    <a href="index.html"><li>Home</li></a>
+                    <a href="index.php"><li>Home</li></a>
                   <a href="tours.html"><li>Tours</li></a>
                    <a href="https://shop.travisscott.com/"><li>Store</li></a>
                    <a href="login.php"><li>Buy Tickets</li></a>
