@@ -22,6 +22,7 @@
             echo "<script type = 'text/javascript'>alert('Ju lutem shenoni te dhena Valide!')</script>";
         }
     }
+    //
 ?>
 <!DOCTYPE html>
 <html lang="en">
