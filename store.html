@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
+        body{
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f2f2;
+        }
+        .main{
+            padding: 50px 0;
+        }
+       
+        .toursHeader{ 
+            background-color: black; 
+        }
+        h3{
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            padding-top: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .content{
+            width: 20%;
+            margin: 15px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+            transition: .4s;
+            background: #f2f2f2;
+        }
+        .content:hover{
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16),
+            0px 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translate(0px,-8px);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+        p{
+            text-align: center;
+            color: #b2bec3;
+            padding-top: 0 8px;
+        }
+        h6{
+            font-size: 26px;
+            text-align: center;
+            color: #222f3e;
+            margin: 0;
+        }
+      
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header class="toursHeader"> 
+        <div class="header">
+            <div class="logo">
+                <a href="index.php">
+                    <img src="./images/logo4.png" id="logo">
+                </a>
+            </div>
+       
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="login.html">Log in</a></li>
+         </ul>
+        </div>
+    </header>
+
+
+    <div class="gallery">
+
+        <div class="content">
+            <img src="shoes.png" alt="shoes">
+            <h3>Shoes</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star "></i></li>
+            </ul>
+            <button class="buy-1">Buy Now</button>
+        </div>
+
+        <div class="content">
+            <img src="earphone.png" alt="earphone">
+            <h3>Earphone</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star "></i></li>
+                <li><i class="fa fa-star "></i></li>
+            </ul>
+            <button class="buy-2">Buy Now</button>
+        </div>
+
+        <div class="content">
+            <img src="watch.png" alt="watch">
+            <h3>Watch</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore ipsum cupiditate dolore minima nam sit magni consequatur eius iste quibusdam laboriosam doloribus blanditiis, quasi, neque quis, numquam recusandae repellendus labore.</p>
+            <h6>$70.00</h6>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star "></i></li>
+            </ul>
+            <button class="buy-3">Buy Now</button>
+        </div>
+
+        <div class="content">
+            <img src="mobile.png" alt="mobile">
+            <h3>Mobile</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore ipsum cupiditate dolore minima nam sit magni consequatur eius iste quibusdam laboriosam doloribus blanditiis, quasi, neque quis, numquam recusandae repellendus labore.</p>
+            <h6>$1000.00</h6>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <button class="buy-4">Buy Now</button>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section foot1">
+                <h3>Festival Tickets</h3>
+                <div class="line"></div>
+            </div>
+            <div class="footer-section foot2">
+                <ul class="aboutfooter">
+                    <a href="index.html"><li>Home</li></a>
+                  <a href="tours.html"><li>Tours</li></a>
+                   <a href="store.html"><li>Store</li></a>
+                   <a href="login.html"><li>Buy Tickets</li></a>
+                </ul>
+                <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
+            </div>
+            <div class="footer-section foot3">
+                <div class="social-icons">
+                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
+                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
+                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
+                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
+            </div>
+                <p>Support: onlinetickets@gmail.com</p>
+        </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
