@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
     $conn = new mysqli("localhost","root","","loginDb") or die (mysql_error());
     
@@ -11,4 +11,4 @@
     //     $stmt->close();
     //     $conn->close();
     
-?>
+?> -->

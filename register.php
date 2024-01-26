@@ -1,38 +1,28 @@
 <?php
     session_start();
 
-    include("db.php");
+    include('db.php');
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
+    if($_SERVER['REQUEST_METHOD']=="POST")
     {
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
         $username = $_POST['username'];
-        $password = $_POST['password']; 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        if(!empty($username) && !empty($password) && !is_numeric($username))
-        {
-            $query = "select * from users where username = '$username' limit 1";
-            $result = mysqli_query($con, $query);
+        if(!empty($email) && !empty($password)){
+            $query = "insert into users (name,surname,username,email,password) values ('$name','$surname','$username','$email','$password')";
 
-            if($result)
-            {
-                if($result && mysqli_num_rows($result) > 0)
-                {
-                    $user_data = mysqli_fetch_assoc($result);
+            mysqli_query($con,$query );
 
-                    if($user_data['password'] == $password)
-                    {
-                        header("location: index.php");
-                        die;
-                        
-                    }
-                }
-            }
-            echo "<script type ='text/javascript'> alert('wrong username or password')</script>";
+            echo "<script type = 'text/javascript'>alert('Ju jeni Regjistruar me Sukses!')</script>";
         }
-        echo "<script type ='text/javascript'> alert('wrong username or password')</script>";
+        else{
+            echo "<script type = 'text/javascript'>alert('Ju lutem shenoni te dhena Valide!')</script>";
+        }
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,27 +81,40 @@
         button:hover{
             background-color: #145b97;
         }
+
         
         
     </style>
 </head>
 <body>
-
+    
     <div class="container">
-            <h1>LOGIN</h1>
-         <form method="POST">   <!-- onsubmit="> return validateForm(event)"> -->
+            <h1>REGISTER</h1>
+             <form method = "POST"> <!-- me research per me bo edhe validimi //onsubmit="return validateForm(event)"> -->
+            <div class="name">
+                <label for="">Emri</label><br>
+                <input type="name" id="name" name="name" required><br>
+            </div><br>
+            <div class="surname">
+                <label for="">Mbiemri</label><br>
+                <input type="surname" id="surname" name="surname" required><br>
+            </div><br>
             <div class="username">
-                <label for="username">Username</label><br>
-                <input type="text" id="username" name="username" required><br>
+                <label for="">Username</label><br>
+                <input type="username" id="username" name="username" required><br>
+            </div><br>
+            <div class="email">
+                <label for="">Email</label><br>
+                <input type="email" id="email" name="email" required><br>
             </div><br>
             <div class="password">
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password"><br>
+                <label for="">Password</label><br>
+                <input type="password" id="password" name="password" required><br>
             </div>
             <br>
-            <button type="submit" name="submit">Submit</button><br>
+            <button type="submit">Submit</button><br>
             <div class="create">
-                <p><a href="register.php">Nuk jeni regjistruar ende? Regjistrohu</a></p>
+                <p><a href="login.php">Jeni te regjistruar?</a></p>
             </div>
         </form>
     </div>
@@ -119,15 +122,35 @@
     <script>
         function validateForm(event){
             event.preventDefault();
+            let name = document.getElementById('name').value;
+            let surname = document.getElementById('surname').value;
             let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
             let password = document.getElementById('password').value;
+
+            let nameRegex = /^[A-Z][a-z]{1,12}$/;
+            if(!nameRegex.test(name)){
+                alert('Please enter a valid name');
+                return false;
+            }
+            let surnameRegex = /^[A-Z][a-z]{1,12}$/;
+            if(!surnameRegex.test(surname)){
+                alert('Please enter a valid surname');
+                return false;
+            }
 
             let usernameRegex = /^[a-z]{1,12}$/;
             if(!usernameRegex.test(username)){
                 alert('Plase enter a valid username');
                 return false;
+            } 
+
+            let emailRegex = /^[a-zA-z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+            if(!emailRegex.test(email)){
+                alert('Please enter a valid email');
+                return false;
             }
-            
+
             let passwordRegex = /^[a-z]+[0-9]{1,8}$/;
             if(!passwordRegex.test(password)){
                 alert('Please enter a valid password');
@@ -137,9 +160,9 @@
                 alert('Password must be at least 6 characters');
                 return;
             } 
+
             window.location.href = "index.php";
         }
     </script>
-
 </body>
 </html>
