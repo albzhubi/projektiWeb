@@ -174,7 +174,7 @@
         <ul class="nav-list">
             <li><a href="index.php">Home</a></li>
             <li><a href="tours.html">Tours</a></li>
-            <li><a href="store.html">Store</a></li>
+            <li><a href="store.php">Store</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="buytickets.html">Buy Tickets</a></li>
             <li><a href="login.php">Log in</a></li>
@@ -282,7 +282,7 @@
                 <ul class="aboutfooter">
                     <a href="index.php"><li>Home</li></a>
                   <a href="tours.html"><li>Tours</li></a>
-                   <a href="https://shop.travisscott.com/"><li>Store</li></a>
+                   <a href="store.php"><li>Store</li></a>
                    <a href="login.php"><li>Buy Tickets</li></a>
                 </ul>
                 <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
