@@ -163,6 +163,7 @@
         .dropdown {
         position: relative;
         display: inline-block;
+        cursor: pointer;
         }
 
         .dropdown-content {
@@ -195,10 +196,10 @@
        
         <ul class="nav-list">
             <li><a href="index.php">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="buytickets.php">Buy Tickets</a></li>
              <?php 
             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
              ?>
@@ -266,7 +267,7 @@
 
             <div class="button-container">
                 <a href="login.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
-                <a href="tours.html"><button type="submit" class="buyticketsbutton">Other Tours</button></a>
+                <a href="tours.php"><button type="submit" class="buyticketsbutton">Other Tours</button></a>
             </div>
 
         </div>

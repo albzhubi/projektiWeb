@@ -1,6 +1,6 @@
 <?php
     include 'db.php';
-
+    session_start();
     $query = "SELECT * FROM products";
     $result = $con->query($query);
 ?>
@@ -120,6 +120,29 @@
         main .buy{
             background-color: #5cb85c;
         } 
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        }
+
+        .dropdown-content {
+        color: #000;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        border-radius: 15px;
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
         @media(max-width:1000px){
             main .content{
                 width: 45%;
@@ -145,15 +168,45 @@
        
         <ul class="nav-list">
             <li><a href="index.php">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="buytickets.html">Buy Tickets</a></li>
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="buytickets.php">Buy Tickets</a></li>
+            
+            <?php 
+            if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
+             ?>
+             <li><a href="dashboard.php">Dashboard</a></li>
+            
+            <?php
+             endif; 
+              ?>
+
+            <?php
+            if (isset($_SESSION['user_id'])):
+            ?>
+
+            <li>
+                <div class="dropdown">
+                    <span>Profile &#11167;</span>
+                    <div class="dropdown-content">
+                        <p><?php echo $_SESSION['user_name']; ?></p>
+                        <a href="logout.php">Log out</a>
+                    </div>
+                </div>
+            </li>
+
+            <?php else: ?>
+
             <li><a href="login.php">Log in</a></li>
+
+            <?php endif; ?>
+
          </ul>
         </div>
     </header>
 
+    
     <main>
         <div class="gallery">
         <?php 
