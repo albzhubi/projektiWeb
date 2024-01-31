@@ -12,9 +12,9 @@
         $password = $_POST['password'];
 
         if(!empty($email) && !empty($password)){
-            $query = "insert into users (name,surname,username,email,password) values ('$name','$surname','$username','$email','$password')";
+            $query = "insert into users (name,surname,username,email,password,role) values ('$name','$surname','$username','$email','$password','user')";
 
-            mysqli_query($con,$query );
+            mysqli_query($con,$query);
 
             echo "<script type = 'text/javascript'>alert('Ju jeni Regjistruar me Sukses!')</script>";
         }

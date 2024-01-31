@@ -1,5 +1,8 @@
 <?php
-    
+    include 'db.php';
+
+    $query = "SELECT * FROM products";
+    $result = $con->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +28,7 @@
             height: 96px;
             background-color: black; 
         }
-        h3{
+        main h3{
             text-align: center;
             font-size: 30px;
             margin: 0;
@@ -34,7 +37,7 @@
         a{
             text-decoration: none;
         }
-        .gallery{
+        main .gallery{
             display: flex;
             flex-wrap: wrap;
             width: 100%;
@@ -42,7 +45,7 @@
             align-items: center;
             margin: 50px 0;
         }
-        .content{
+        main .content{
             width: 20%;
             margin: 15px;
             box-sizing: border-box;
@@ -56,52 +59,52 @@
             transition: .4s;
             background: #f2f2f2;
         }
-        .content:hover{
+        main .content:hover{
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16),
             0px 3px 6px rgba(0, 0, 0, 0.23);
             transform: translate(0px,-8px);
         }
-        img{
+        main img{
             width: 200px;
             height: 200px;
             text-align: center;
             margin: 0 auto;
             display: block;
         }
-        p{
+        main p{
             text-align: center;
             color: #b2bec3;
             padding-top: 0 8px;
         }
-        h6{
+        main h6{
             font-size: 26px;
             text-align: center;
             color: #222f3e;
             margin: 0;
         }
-        ul{
+        main ul{
             list-style: none;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 0;
         }
-        li{
+        main li{
             padding: 5px;
         }
-        .fa{
+        main .fa{
             font-size: 26px;
             transition: .4s;
             
         }
-        .checked{
+        main .checked{
             color:#ff9f43 ;
         }
-        .fa:hover{
+        main .fa:hover{
             transform: scale(1.3);
             transition: .6s;
         }
-        button{
+        main button{
             text-align: center;
             font-size: 24px;
             color: #fff;
@@ -114,23 +117,19 @@
             border-bottom-right-radius: 20px;
             border-bottom-left-radius: 20px;
         }
-        .buy{
+        main .buy{
             background-color: #5cb85c;
         } 
         @media(max-width:1000px){
-            .content{
+            main .content{
                 width: 45%;
             }
         }
         @media(max-width:750px){
-            .content{
+            main .content{
                 width: 100%;
             }
         }
-
-
-
-
 
     </style>
 </head>
@@ -155,102 +154,36 @@
         </div>
     </header>
 
+    <main>
+        <div class="gallery">
+        <?php 
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="content">
+                    <img src="./images/hoodie.png" alt="shoes">
+                    <h3>' . htmlspecialchars($row['product_name']) . '</h3>
+                    <p>' . htmlspecialchars($row['description']) . '</p>
+                    <h6>$' . number_format($row['price'], 2) . '</h6>
+                    <ul>';
+                
+                $numberOfStars = $row['review']; 
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= $numberOfStars) {
+                        echo '<li><i class="fa fa-star checked"></i></li>';
+                    } else {
+                        echo '<li><i class="fa fa-star"></i></li>';
+                    }
+                }
+                
+                echo '</ul>
+                    <button class="buy">Buy Now</button>
+                </div>';
+            }
+            ?>
 
-    <div class="gallery">
 
-        <div class="content">
-            <img src="./images/hoodie.png" alt="shoes">
-            <h3>Shoes</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            <h6>$100.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star "></i></li>
-            </ul>
-            <button class="buy">Buy Now</button>
         </div>
-
-        <div class="content">
-            <img src="./images/hoodie.png" alt="earphone">
-            <h3>Earphone</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            <h6>$100.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star "></i></li>
-                <li><i class="fa fa-star "></i></li>
-            </ul>
-            <button class="buy">Buy Now</button>
-        </div>
-
-        <div class="content">
-            <img src="./images/hoodie.png" alt="watch">
-            <h3>Watch</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            <h6>$100.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            <button class="buy">Buy Now</button>
-        </div>
-
-        <div class="content">
-            <img src="./images/hoodie.png" alt="mobile">
-            <h3>Mobile</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            <h6>$100.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            <button class="buy">Buy Now</button>
-        </div>
-
-
-
-
-    </div>
-
-
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section foot1">
-                <h3>Festival Tickets</h3>
-                <div class="line"></div>
-            </div>
-            <div class="footer-section foot2">
-                <ul class="aboutfooter">
-                    <a href="index.php"><li>Home</li></a>
-                  <a href="tours.html"><li>Tours</li></a>
-                   <a href="store.php"><li>Store</li></a>
-                   <a href="login.php"><li>Buy Tickets</li></a>
-                </ul>
-                <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
-            </div>
-            <div class="footer-section foot3">
-                <div class="social-icons">
-                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
-                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
-                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
-                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
-            </div>
-                <p>Support: onlinetickets@gmail.com</p>
-        </div>
-        </div>
-    </footer>
+    </main>
+    <?php include 'footer.php' ?>
     
 </body>
 </html>

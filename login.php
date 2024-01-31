@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start();    
 
     include("db.php");
 
@@ -11,7 +11,7 @@
         if(!empty($username) && !empty($password) && !is_numeric($username))
         {
             $query = "select * from users where username = '$username' limit 1";
-            $result = mysqli_query($con, $query);
+            $result = mysqli_query($con,$query,);
 
             if($result)
             {
@@ -21,6 +21,10 @@
 
                     if($user_data['password'] == $password)
                     {
+                        $_SESSION['role'] =  $user_data['role'];
+                        $_SESSION['user_id'] = $user_data['id'];
+                        $_SESSION['user_name'] = $user_data['name'] . $user_data['surname'];
+                        echo $_SESSION['role'];
                         header("location: index.php");
                         die;
                         

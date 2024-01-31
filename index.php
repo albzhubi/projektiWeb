@@ -1,5 +1,6 @@
 <?php
    include('db.php');
+   session_start();
 ?>
 
 <!DOCTYPE html>
@@ -158,6 +159,27 @@
         .album-description{
             font-family: 'Poppins', sans-serif;
         }
+        /* dropdwon css */
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        color: #000;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        border-radius: 15px;
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
       
     </style>
 
@@ -177,9 +199,37 @@
             <li><a href="store.php">Store</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="buytickets.html">Buy Tickets</a></li>
+             <?php 
+            if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
+             ?>
+             <li><a href="dashboard.php">Dashboard</a></li>
+            
+            <?php
+             endif; 
+              ?>
+
+            <?php
+            if (isset($_SESSION['user_id'])):
+            ?>
+
+            <li>
+                <div class="dropdown">
+                    <span>Profile &#11167;</span>
+                    <div class="dropdown-content">
+                        <p><?php echo $_SESSION['user_name']; ?></p>
+                        <a href="logout.php">Log out</a>
+                    </div>
+                </div>
+            </li>
+
+            <?php else: ?>
+
             <li><a href="login.php">Log in</a></li>
-         </ul>
-        </div>
+
+            <?php endif; ?>
+
+              </ul>
+            </div>
         <div class="header-desc">
             <div class="welcome">
                 <h1>Utopia Tours</h1>
@@ -272,32 +322,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section foot1">
-                <h3>Festival Tickets</h3>
-                <div class="line"></div>
-            </div>
-            <div class="footer-section foot2">
-                <ul class="aboutfooter">
-                    <a href="index.php"><li>Home</li></a>
-                  <a href="tours.html"><li>Tours</li></a>
-                   <a href="store.php"><li>Store</li></a>
-                   <a href="login.php"><li>Buy Tickets</li></a>
-                </ul>
-                <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
-            </div>
-            <div class="footer-section foot3">
-                <div class="social-icons">
-                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
-                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
-                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
-                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
-            </div>
-                <p>Support: onlinetickets@gmail.com</p>
-        </div>
-        </div>
-    </footer>
+  <?php include 'footer.php' ?>
 
 
     <script>
