@@ -294,6 +294,7 @@
 </head>
 <body>
     
+    <!-- include headerin tnjejt per ton -->
     <!-- <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
@@ -339,7 +340,7 @@
          </ul>
         </div>
     </header> -->
-    <?php include 'header.php'?>
+    <?php include 'header.php'?> 
 
     <!-- <a href="buytickets.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a> -->
     <main>

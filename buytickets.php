@@ -57,7 +57,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             display: block;
-        }
+        } 
 
         #logo{
             width: 150px;
