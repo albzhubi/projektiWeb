@@ -103,7 +103,7 @@
 
     <div class="container">
             <h1>LOGIN</h1>
-         <form method="POST">   <!-- onsubmit="> return validateForm(event)"> -->
+         <form method="POST" onsubmit="> return validateForm(event)"> 
             <div class="username">
                 <label for="username">Username</label><br>
                 <input type="text" id="username" name="username" required><br>
@@ -122,7 +122,7 @@
         
     <script>
         function validateForm(event){
-            event.preventDefault();
+            //event.preventDefault();
             let username = document.getElementById('username').value;
             let password = document.getElementById('password').value;
 
