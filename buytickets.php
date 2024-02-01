@@ -17,6 +17,10 @@
             background-color: black;
         }
 
+        footer{
+            height: 100px;
+        }
+
         main .tickets{
             /* background: url(https://img.freepik.com/premium-vector/modern-colorful-3d-wave-wide-banner-background-abstract-background-banner-design-web-banner-texture-header-website-vector-abstract-graphic-design-banner-pattern-background-template_181182-16317.jpg); */
             background-repeat: no-repeat;
@@ -32,6 +36,7 @@
         .form-container form{
             display: flex;
             flex-direction: column;
+            height: 300px;
             width: 600px;
             margin: auto;
             padding: 20px;

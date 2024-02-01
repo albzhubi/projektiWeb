@@ -23,7 +23,7 @@
                     {
                         $_SESSION['role'] =  $user_data['role'];
                         $_SESSION['user_id'] = $user_data['id'];
-                        $_SESSION['user_name'] = $user_data['name'] . $user_data['surname'];
+                        $_SESSION['user_name'] = $user_data['username']; //nese dojim mi paraqit n dropdown button emrin mbiemrin : $user.data['name]. $user_data['surname'];
                         echo $_SESSION['role'];
                         header("location: index.php");
                         die;

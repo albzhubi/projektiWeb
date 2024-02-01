@@ -9,6 +9,7 @@
                 <a href="index.php"><li>Home</li></a>
                 <a href="tours.php"><li>Tours</li></a>
                 <a href="store.php"><li>Store</li></a>
+                <a href="contactus.php">Contact Us</a>
                 <a href="buytickets.php"><li>Buy Tickets</li></a>
             </ul>
             <h5>&copy; 2023 Alb&Lorik. All rights reserved</h5>

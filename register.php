@@ -91,7 +91,7 @@
     
     <div class="container">
             <h1>REGISTER</h1>
-             <form method = "POST"> <!-- me research per me bo edhe validimi //onsubmit="return validateForm(event)"> -->
+             <form method = "POST" onsubmit="return validateForm(event)"> 
             <div class="name">
                 <label for="">Emri</label><br>
                 <input type="name" id="name" name="name" required><br>
@@ -121,49 +121,50 @@
     </div>
         
     <script>
-        function validateForm(event){
-            event.preventDefault();
-            let name = document.getElementById('name').value;
-            let surname = document.getElementById('surname').value;
-            let username = document.getElementById('username').value;
-            let email = document.getElementById('email').value;
-            let password = document.getElementById('password').value;
+        function validateForm(event) {
+        let name = document.getElementById('name').value;
+        let surname = document.getElementById('surname').value;
+        let username = document.getElementById('username').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
 
-            let nameRegex = /^[A-Z][a-z]{1,12}$/;
-            if(!nameRegex.test(name)){
-                alert('Please enter a valid name');
-                return false;
-            }
-            let surnameRegex = /^[A-Z][a-z]{1,12}$/;
-            if(!surnameRegex.test(surname)){
-                alert('Please enter a valid surname');
-                return false;
-            }
-
-            let usernameRegex = /^[a-z]{1,12}$/;
-            if(!usernameRegex.test(username)){
-                alert('Plase enter a valid username');
-                return false;
-            } 
-
-            let emailRegex = /^[a-zA-z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-            if(!emailRegex.test(email)){
-                alert('Please enter a valid email');
-                return false;
-            }
-
-            let passwordRegex = /^[a-z]+[0-9]{1,8}$/;
-            if(!passwordRegex.test(password)){
-                alert('Please enter a valid password');
-                return false;
-            }
-            if(password.length < 6){
-                alert('Password must be at least 6 characters');
-                return;
-            } 
-
-            window.location.href = "index.php";
+        let nameRegex = /^[A-Z][a-z]{1,12}$/;
+        if (!nameRegex.test(name)) {
+            alert('Please enter a valid name');
+            return false;
         }
+
+        let surnameRegex = /^[A-Z][a-z]{1,12}$/;
+        if (!surnameRegex.test(surname)) {
+            alert('Please enter a valid surname');
+            return false;
+        }
+
+        let usernameRegex = /^[a-z]{1,12}$/;
+        if (!usernameRegex.test(username)) {
+            alert('Please enter a valid username');
+            return false;
+        }
+
+        let emailRegex = /^[a-zA-z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email');
+            return false;
+        }
+
+        let passwordRegex = /^[a-z]+[0-9]{1,8}$/;
+        if (!passwordRegex.test(password)) {
+            alert('Please enter a valid password');
+            return false;
+        }
+
+        if (password.length < 6) {
+            alert('Password must be at least 6 characters');
+            return false;
+        }
+
+        // spe funksionon ???? -> window.location.href = "login.php";
+}
     </script>
 </body>
 </html>

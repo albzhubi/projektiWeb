@@ -266,7 +266,7 @@
             </div>
 
             <div class="button-container">
-                <a href="login.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
+                <a href="buytickets.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a>
                 <a href="tours.php"><button type="submit" class="buyticketsbutton">Other Tours</button></a>
             </div>
 

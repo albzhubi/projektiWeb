@@ -63,7 +63,7 @@
             margin: 0;
             color: #fff;
         }
-        p{
+        .tour-container p {
             color: #8a8a8a;
         }
         .arrow-left,
