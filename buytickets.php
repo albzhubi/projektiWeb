@@ -13,7 +13,7 @@
         /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
         
-        .buyticketsHeader{
+        .toursHeader{
             background-color: black;
         }
 
@@ -123,7 +123,7 @@
 
 </head>
 <body>
-    <header class="buyticketsHeader"> 
+    <!-- <header class="buyticketsHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -131,13 +131,13 @@
                 </a>
             </div>
        
-        <ul class="nav-list">
+            <ul class="nav-list">
             <li><a href="index.php">Home</a></li>
             <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+
             <li><a href="buytickets.php">Buy Tickets</a></li>
-            <?php 
+             <?php 
             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
              ?>
              <li><a href="dashboard.php">Dashboard</a></li>
@@ -145,6 +145,9 @@
             <?php
              endif; 
               ?>
+              <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin')) : ?>
+                <li><a href="contactus.php">Contact Us</a></li>
+            <?php endif; ?>
 
             <?php
             if (isset($_SESSION['user_id'])):
@@ -165,10 +168,13 @@
             <li><a href="login.php">Log in</a></li>
 
             <?php endif; ?>
+
             
          </ul>
         </div>
-    </header>
+    </header> -->
+
+    <?php include 'header.php'?>
     <main>
     <div class="tickets">
         <h1>Blej tani bileten</h1>

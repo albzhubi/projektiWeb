@@ -108,7 +108,7 @@
 </head>
 <body>
 
-    <header class="toursHeader"> 
+    <!-- <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -152,7 +152,8 @@
             <?php endif; ?>
          </ul>
         </div>
-    </header>
+    </header> -->
+    <?php include 'header.php'?>
 
     <div class="contact-form">
         <h1>Contact Us</h1>

@@ -102,7 +102,7 @@
         }
 
         #logo{
-            width: 150px;
+            width: 100%;
             height: 60px;
             left: 0;
             top: 0%;
@@ -294,7 +294,7 @@
 </head>
 <body>
     
-    <header class="toursHeader"> 
+    <!-- <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -338,7 +338,8 @@
             <?php endif; ?>
          </ul>
         </div>
-    </header>
+    </header> -->
+    <?php include 'header.php'?>
 
     <!-- <a href="buytickets.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a> -->
     <main>

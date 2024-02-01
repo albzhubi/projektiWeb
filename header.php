@@ -6,13 +6,13 @@
                 </a>
             </div>
        
-        <ul class="nav-list">
+            <ul class="nav-list">
             <li><a href="index.php">Home</a></li>
             <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+
             <li><a href="buytickets.php">Buy Tickets</a></li>
-            <?php 
+             <?php 
             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
              ?>
              <li><a href="dashboard.php">Dashboard</a></li>
@@ -20,6 +20,9 @@
             <?php
              endif; 
               ?>
+              <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin')) : ?>
+                <li><a href="contactus.php">Contact Us</a></li>
+            <?php endif; ?>
 
             <?php
             if (isset($_SESSION['user_id'])):
@@ -40,6 +43,8 @@
             <li><a href="login.php">Log in</a></li>
 
             <?php endif; ?>
+
+            
          </ul>
         </div>
     </header>
@@ -117,10 +122,11 @@ header a{
     z-index: 999;
 }
 #logo{
-
-    width: 90px;
-    height: 60px;
-}
+            width: 100%;
+            height: 60px;
+            left: 0;
+            top: 0%;
+        } 
 .main{
     max-width: 80%;
     width: 100%;

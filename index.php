@@ -50,7 +50,7 @@
         }
         
         #logo{
-            width: 150px;
+            width: 100%;
             height: 60px;
             left: 0;
             top: 0%;
@@ -198,7 +198,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+
             <li><a href="buytickets.php">Buy Tickets</a></li>
              <?php 
             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
@@ -208,6 +208,9 @@
             <?php
              endif; 
               ?>
+              <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin')) : ?>
+                <li><a href="contactus.php">Contact Us</a></li>
+            <?php endif; ?>
 
             <?php
             if (isset($_SESSION['user_id'])):

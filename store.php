@@ -23,6 +23,12 @@
         .main{
             padding: 50px 0;
         }
+        #logo{
+            width: 150px;
+            height: 60px;
+            left: 0;
+            top: 0%;
+        }  
        
         .toursHeader{ 
             height: 96px;
@@ -158,7 +164,7 @@
 </head>
 <body>
 
-    <header class="toursHeader"> 
+    <!-- <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -204,7 +210,9 @@
 
          </ul>
         </div>
-    </header>
+    </header> -->
+
+    <?php include 'header.php' ?>
 
     
     <main>

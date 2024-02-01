@@ -29,6 +29,8 @@
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
+            <th>Reviews</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +42,7 @@
             echo "<td>{$row['description']}</td>";
             echo "<td>{$row['price']}</td>";
             echo "<td>{$row['review']}</td>";
+            echo "<td><button class = 'edit' onclick='handleButtonClick({$row['id']})'>Edit</button> <button class = 'delete' onclick='handleButtonClick({$row['id']})'>Delete</button></td>";
             echo "</tr>";
         }
         ?>
