@@ -21,7 +21,7 @@
                 <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
                 <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
             </div>
-            <p>Support: onlinetickets@gmail.com</p>
+            <p>Support: onlinetickets433@gmail.com</p>
         </div>
     </div>
 </footer>

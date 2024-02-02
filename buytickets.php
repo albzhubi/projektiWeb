@@ -16,7 +16,7 @@
         .toursHeader{
             background-color: black;
         }
-
+ 
         footer{
             height: 100px;
         }
@@ -178,7 +178,7 @@
     <main>
     <div class="tickets">
         <h1>Blej tani bileten</h1>
-        <div class="form-container">
+        <div class="form-container">    
             <form action="" id="ticketForm">
                 <div class="name">
                     <input type="text" id="name" placeholder="Add name"><br>

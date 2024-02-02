@@ -108,7 +108,7 @@
 </head>
 <body>
 
-    <!-- <header class="toursHeader"> 
+    <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -152,32 +152,34 @@
             <?php endif; ?>
          </ul>
         </div>
-    </header> -->
-    <?php include 'header.php'?>
+    </header>
 
     <div class="contact-form">
         <h1>Contact Us</h1>
-        <div class="txtb">
-            <label>Full Name: </label>
-            <input type="text" name="" value="" >
-        </div>
+            <form action="process.php" method="POST">
+                <div class="txtb">
+                    <label>Full Name: </label>
+                    <input type="text" name="fullname" value="" >
+                </div>
 
-        <div class="txtb">
-            <label>Email: </label>
-            <input type="email" name="" value="">
-        </div>
+                <div class="txtb">
+                    <label>Subject: </label>
+                    <input type="text" name="subject" value="" >
+                </div>
 
-        <div class="txtb">
-            <label>Phone Number: </label>
-            <input type="text" name="" value="" >
-        </div>
+                <div class="txtb">
+                    <label>Email: </label>
+                    <input type="email" name="email" value="">
+                </div>
 
-        <div class="txtb">
-            <label>Message: </label>
-            <textarea></textarea>
-        </div>
+               <div class="txtb">
+                    <label>Message: </label>
+                    <textarea name="message"></textarea>
+                </div>
 
-        <a class="btn">Send</a>
+                <input type="submit" value="Send" name="submit">
+
+            </form>
     </div>
 
 
