@@ -120,7 +120,7 @@
         ?>
     </tbody>
 </table>
-
+ 
 <div class="form-container">
     <button onclick="showAddProductForm()" id="addProductButton">Add Product</button>
     <form id="addProductForm" style="display: none;" method="post">
