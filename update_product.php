@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>
                 setTimeout(function() {
                     window.location.href = 'dashboard.php';
-                }, 2000); 
+                }, 1000); 
               </script>";
     } else {
         echo "Error updating product details: " . $con->error;

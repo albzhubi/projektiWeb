@@ -192,7 +192,7 @@
                 <div class="select-container">
                     <select name="select" id="select">
                         <option value="Choose">Choose place</option>
-                        <option value="Prishtina">Berlin</option>
+                        <option value="Gjakovë">Gjakovë</option>
                         <option value="New York">New York</option>
                         <option value="Paris">Paris</option>
                         <option value="London">London</option>
