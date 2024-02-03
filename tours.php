@@ -294,55 +294,10 @@
 </head>
 <body>
     
-    <!-- include headerin tnjejt per ton -->
-    <!-- <header class="toursHeader"> 
-        <div class="header">
-            <div class="logo">
-                <a href="index.php">
-                    <img src="./images/logo4.png" id="logo">
-                </a>
-            </div>
-       
-        <ul class="nav-list">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="tours.php">Tours</a></li>
-            <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
-            <li><a href="buytickets.php">Buy Tickets</a></li>
-            <?php 
-            if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
-             ?>
-             <li><a href="dashboard.php">Dashboard</a></li>
-            
-            <?php
-             endif; 
-              ?>
-
-            <?php
-            if (isset($_SESSION['user_id'])):
-            ?>
-
-            <li>
-                <div class="dropdown">
-                    <span>Profile &#11167;</span>
-                    <div class="dropdown-content">
-                        <p><?php echo $_SESSION['user_name']; ?></p>
-                        <a href="logout.php">Log out</a>
-                    </div>
-                </div>
-            </li>
-
-            <?php else: ?>
-
-            <li><a href="login.php">Log in</a></li>
-
-            <?php endif; ?>
-         </ul>
-        </div>
-    </header> -->
+    
     <?php include 'header.php'?> 
 
-    <!-- <a href="buytickets.php"><button type="submit" class="buyticketsbutton">Buy Tickets</button></a> -->
+
     <main>
         <div class="main"> 
             <div class="tour-container">

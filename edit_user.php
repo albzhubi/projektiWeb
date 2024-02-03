@@ -116,6 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
             background-image: linear-gradient(to right, #61045f, #aa076b);
         }
         span{
+            font-weight: bold;
             cursor: pointer;
         }
 

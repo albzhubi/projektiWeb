@@ -122,65 +122,16 @@
 </head>
 <body>
 
-    <!-- <header class="toursHeader"> 
-        <div class="header">
-            <div class="logo">
-                <a href="index.php">
-                    <img src="./images/logo4.png" id="logo">
-                </a>
-            </div>
-       
-        <ul class="nav-list">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="tours.php">Tours</a></li>
-            <li><a href="store.php">Store</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
-            <li><a href="buytickets.php">Buy Tickets</a></li>
-            <?php 
-            if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
-             ?>
-             <li><a href="dashboard.php">Dashboard</a></li>
-            
-            <?php
-             endif; 
-              ?>
-
-            <?php
-            if (isset($_SESSION['user_id'])):
-            ?>
-
-            <li>
-                <div class="dropdown">
-                    <span>Profile &#11167;</span>
-                    <div class="dropdown-content">
-                        <p><?php echo $_SESSION['user_name']; ?></p>
-                        <a href="logout.php">Log out</a>
-                    </div>
-                </div>
-            </li>
-
-            <?php else: ?>
-
-            <li><a href="login.php">Log in</a></li>
-
-            <?php endif; ?>
-         </ul>
-        </div>
-    </header> -->
     <?php include 'header.php' ?>
 
     <div class="contact-form">
         <h1>Contact Us</h1>
-            <form action="process.php" method="POST">
+            <form>
                 <div class="txtb">
-                    <label>Full Name: </label>
-                    <input type="text" name="fullname" value="" >
+                    <label>Name: </label>
+                    <input type="text" name="name" value="" >
                 </div>
 
-                <div class="txtb">
-                    <label>Subject: </label>
-                    <input type="text" name="subject" value="" >
-                </div>
 
                 <div class="txtb">
                     <label>Email: </label>
@@ -192,37 +143,14 @@
                     <textarea name="message"></textarea>
                 </div>
 
-                <input type="submit" value="Semd">
+                <input type="submit" value="Send">
 
             </form>
     </div>
 
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section foot1">
-                <h3>Festival Tickets</h3>
-                <div class="line"></div>
-            </div>
-            <div class="footer-section foot2">
-                <ul class="aboutfooter">
-                    <a href="index.php"><li>Home</li></a>
-                  <a href="tours.php"><li>Tours</li></a>
-                   <a href="store.php"><li>Store</li></a>
-                   <a href="login.php"><li>Buy Tickets</li></a>
-                </ul>
-                <h5>&copy; 2023 Alb&Lorik.All rights reserved</h5>
-            </div>
-            <div class="footer-section foot3">
-                <div class="social-icons">
-                <a href="https://www.instagram.com/travisscott/?hl=en"> <img src="./images/insta-icon.svg" ></a> 
-                <a href="https://www.facebook.com/travisscottlaflame/" > <img src="./images/fb-icon.svg" alt="" ></a>
-                <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
-                <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
-            </div>
-            <p>Support: onlinetickets@gmail.com</p>
-        </div>
-    </footer>
+
+    <?php include 'footer.php' ?>
     
     
 </body>
