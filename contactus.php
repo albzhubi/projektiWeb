@@ -82,41 +82,41 @@
         }
 
         .dropdown {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
         }
 
         .dropdown-content {
-        color: #000;
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-        border-radius: 15px;
+            color: #000;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            border-radius: 15px;
         }
 
         .dropdown:hover .dropdown-content {
-        display: block;
+            display: block;
         }
 
         .contact-form input[type="submit"] {
-                        width: 150px;
-                        height: 40px;
-                        border: none;
-                        border-radius: 20px;
-                        font-size: 14px;
-                        cursor: pointer;
-                        color: rgba(113, 99, 186, 255);
-                        background-color: #ebe9e9;
-                        font-weight: bold;
-                        position: absolute;                        
-                        left: 45%; 
-                        transform: translateX(-50%); 
-                    }
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            color: rgba(113, 99, 186, 255);
+            background-color: #ebe9e9;
+            font-weight: bold;
+            position: absolute;                        
+            left: 45%; 
+            transform: translateX(-50%); 
+        }
 
     </style>
 </head>
@@ -220,8 +220,7 @@
                 <a href=" https://twitter.com/trvisXX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "> <img src="./images/twitter-icon.svg" alt=""> </a>
                 <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"> <img src="./images/spotify.svg" alt=""> </a>
             </div>
-                <p>Support: onlinetickets@gmail.com</p>
-        </div>
+            <p>Support: onlinetickets@gmail.com</p>
         </div>
     </footer>
     

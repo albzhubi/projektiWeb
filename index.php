@@ -46,7 +46,6 @@
             padding-left: 80px;
             margin-top: -50px;
             z-index: 9999;
-
         }
         
         #logo{
@@ -82,7 +81,7 @@
 
 
           /* Pjesa e countdown */
-          *{
+        *{
             box-sizing: border-box;
         }
         .countdown-container{
@@ -108,7 +107,6 @@
             color: black;
             /* border-bottom: 1px solid black; */
             padding-bottom: 40px;
-
         }
 
         .countdown-box{
@@ -198,17 +196,19 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="tours.php">Tours</a></li>
             <li><a href="store.php">Store</a></li>
-
             <li><a href="buytickets.php">Buy Tickets</a></li>
+
              <?php 
             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') :
              ?>
+
              <li><a href="dashboard.php">Dashboard</a></li>
             
             <?php
              endif; 
-              ?>
-              <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin')) : ?>
+            ?>
+
+            <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin')) : ?>
                 <li><a href="contactus.php">Contact Us</a></li>
             <?php endif; ?>
 
