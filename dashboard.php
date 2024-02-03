@@ -179,6 +179,7 @@
         <div class="tab">
         <button class="tablinks active" onclick="openCity(event, 'Users')">Users</button>
         <button class="tablinks" onclick="openCity(event, 'Products')">Produts</button>
+        <button class="tablinks" onclick="openCity(event, 'Orders')">Orders</button>
         </div>
 
         <div id="Users" class="tabcontent">
@@ -186,8 +187,13 @@
         </div>
 
         <div id="Products" class="tabcontent">
-            <?php include 'products.php' ?>
-        </div>
+    <?php include 'products.php' ?>
+</div>
+
+<div id="Orders" class="tabcontent">
+    <?php include 'orders.php' ?>
+</div>
+
 
 
         <script>
