@@ -135,7 +135,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
             height: 150px;
             resize: vertical;
         }
-
+        span{
+            cursor: pointer;
+        }
 
     </style> 
 

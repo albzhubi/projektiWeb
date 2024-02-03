@@ -115,6 +115,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         .button-container button:hover {
             background-image: linear-gradient(to right, #61045f, #aa076b);
         }
+        span{
+            cursor: pointer;
+        }
 
             
     </style> 
