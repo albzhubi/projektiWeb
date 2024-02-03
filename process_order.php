@@ -12,11 +12,9 @@ if(isset($_POST['buy_now'])) {
 
     if($result) {
         echo "Order successfully placed!";
-        echo "<script>
-        setTimeout(function() {
-            window.location.href = 'store.php';
-        }, 2000); 
-      </script>";
+        echo  "<script>
+        window.location.href = 'purchase_confirmation.php';
+        </script>";
     } else {
         echo "Error placing order: " . $con->error;
     }
