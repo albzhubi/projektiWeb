@@ -15,13 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Edit Product</title>
             <style>
+                @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Montserrat:wght@300&family=Open+Sans:wght@700&family=Poppins&display=swap');
                     .form-container {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        height: 400px;
+                        height: 530px;
                         width: 300px;
                         margin: auto;
+                        margin-top: 15px ;
                         padding: 20px;
                         border: 1px solid black;
                         border-radius: 10px;
@@ -54,8 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                         border-radius: 20px;
                         font-size: 14px;
                         cursor: pointer;
-                        background-color: #145b97;
-                        color: white;
+                        color: rgba(113, 99, 186, 255);
+                        background-color: #ebe9e9;
+                        font-weight: bold;
                         position: absolute;                        
                         left: 45%; 
                         transform: translateX(-50%); 
@@ -98,15 +101,72 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                     .dropdown:hover .dropdown-content {
                         display: block;
                     }
+                    /*header content*/
+                    *{
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    outline: none;
+                    box-sizing: border-box;
+                    font-family:'Poppins', sans-serif;
+                }
+                    .header-content{
+                    position: relative;
+                    background: #ebe9e9;
+                    width: 100%;
+                    padding: 1rem;
+                }
+
+                .header-wrapper img{
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+                .header-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    background: #fff;
+                    border-radius: 10px;
+                    padding: 10px 2rem;
+                    margin-bottom: 1rem;
+                }
+                .header-title{
+                    color: rgba(113, 99, 186, 255);
+                }
+                .user-info{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+                span{
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+
 </style>
 
 
         </head> 
         <body>
+        <div class="header-content">
+            <div class="header-wrapper">
+                <div class="header-title">
+                <span style='font-size:25px;' onclick="history.back()">&#8617 Dashboard</span>
+                </div>
+                <div class="user-info">
+                        <a href="dashboard.php"><img src="./images/admin.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="editForm">
             <div class="form-container">
             <h2>Edit Product</h2>
-            <form method="post" action="update_product.php">
+            <form method="post" action="update_product.php" enctype="multipart/form-data">
                     <input type="hidden" name="productId" value="<?php echo $row['id']; ?>">
 
                     <label for="productName">Name:</label>
@@ -120,6 +180,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
 
                     <label for="productReview">Review:</label>
                     <input type="text" id="productReview" name="productReview">
+
+                    <label for="productImage">Image:</label>
+                    <input type="file" id="productImage" name="productImage">
 
                     <input type="submit" value="Save Changes">
                 </form>

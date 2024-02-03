@@ -103,12 +103,26 @@
         display: block;
         }
 
+        .contact-form input[type="submit"] {
+                        width: 150px;
+                        height: 40px;
+                        border: none;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        color: rgba(113, 99, 186, 255);
+                        background-color: #ebe9e9;
+                        font-weight: bold;
+                        position: absolute;                        
+                        left: 45%; 
+                        transform: translateX(-50%); 
+                    }
 
     </style>
 </head>
 <body>
 
-    <header class="toursHeader"> 
+    <!-- <header class="toursHeader"> 
         <div class="header">
             <div class="logo">
                 <a href="index.php">
@@ -152,7 +166,8 @@
             <?php endif; ?>
          </ul>
         </div>
-    </header>
+    </header> -->
+    <?php include 'header.php' ?>
 
     <div class="contact-form">
         <h1>Contact Us</h1>
@@ -177,7 +192,7 @@
                     <textarea name="message"></textarea>
                 </div>
 
-                <input type="submit" value="Send" name="submit">
+                <input type="submit" value="Semd">
 
             </form>
     </div>

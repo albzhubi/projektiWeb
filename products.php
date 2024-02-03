@@ -1,15 +1,24 @@
 <?php
     include("db.php");
 
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Process the form data and insert into the database
         $productName = $_POST['productName'];
         $productDescription = $_POST['productDescription'];
         $productPrice = $_POST['productPrice'];
         $productReview = $_POST['productReview'];
+        $productImage = $_FILES['productImage'];
     
-        $insertQuery = "INSERT INTO products (product_name, description, price, review) VALUES ('$productName', '$productDescription', '$productPrice', '$productReview')";
+        // Check for file upload errors
+        if ($productImage['error'] > 0) {
+            die('File Upload Error: ' . $productImage['error']);
+        }
+    
+        // Move uploaded file to "uploads" folder with a unique name
+        $uploadPath = "uploads/" . uniqid() . '_' . $productImage['name'];
+        move_uploaded_file($productImage['tmp_name'], $uploadPath);
+    
+        $insertQuery = "INSERT INTO products (product_name, description, price, review, image) VALUES ('$productName', '$productDescription', '$productPrice', '$productReview', '$uploadPath')";
     
         if ($con->query($insertQuery) === TRUE) {
             echo "Product added successfully";
@@ -17,9 +26,11 @@
             echo "Error: " . $insertQuery . "<br>" . $con->error;
         }
     }
+    
     $query = "SELECT * FROM products";
     $result = $con->query($query);
-    ?>
+    
+    ?>  
 
     <style>
         .toursHeader{
@@ -102,6 +113,7 @@
             <th>Description</th>
             <th>Price</th>
             <th>Reviews</th>
+            <th>Image</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -114,6 +126,7 @@
             echo "<td>{$row['description']}</td>";
             echo "<td>{$row['price']}</td>";
             echo "<td>{$row['review']}</td>";
+            echo "<td>{$row['image']}</td>";
             echo "<td><button class='edit' onclick='handleEditProductButtonClick({$row['id']})'>Edit</button> <button class='delete' onclick='handleDeleteButtonClick({$row['id']})'>Delete</button></td>";
             echo "</tr>";
         }
@@ -123,21 +136,25 @@
  
 <div class="form-container">
     <button onclick="showAddProductForm()" id="addProductButton">Add Product</button>
-    <form id="addProductForm" style="display: none;" method="post">
-        <label for="productName">Name:</label>
-        <input type="text" id="productName" name="productName">
+        <form id="addProductForm" style="display: none;" method="post" enctype="multipart/form-data">
+            <label for="productName">Name:</label>
+            <input type="text" id="productName" name="productName">
 
-        <label for="productDescription">Description:</label>
-        <input type="text" id="productDescription" name="productDescription">
+            <label for="productDescription">Description:</label>
+            <input type="text" id="productDescription" name="productDescription">
 
-        <label for="productPrice">Price:</label>
-        <input type="text" id="productPrice" name="productPrice">
+            <label for="productPrice">Price:</label>
+            <input type="text" id="productPrice" name="productPrice">
 
-        <label for="productReview">Review:</label>
-        <input type="text" id="productReview" name="productReview">
+            <label for="productReview">Review:</label>
+            <input type="text" id="productReview" name="productReview">
 
-        <input type="submit" name="submit"value="Add Product">
-    </form>
+            <label for="productImage">Image:</label>
+            <input type="file" id="productImage" name="productImage">
+
+            <input type="submit" name="submit" value="Add Product">
+        </form>
+
 </div>
 
 <script>

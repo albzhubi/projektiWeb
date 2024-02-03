@@ -8,7 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $review = $_POST['productReview'];
 
-    $updateQuery = "UPDATE products SET product_name='$name', description='$description', price='$price', review='$review' WHERE id=$productId";
+    if ($_FILES['productImage']['error'] === UPLOAD_ERR_OK) {
+        $productImage = $_FILES['productImage'];
+
+        
+        if ($productImage['error'] > 0) {
+            die('File Upload Error: ' . $productImage['error']);
+        }
+
+        
+        $uploadPath = "uploads/" . uniqid() . '_' . $productImage['name'];
+        move_uploaded_file($productImage['tmp_name'], $uploadPath);
+
+        
+        $updateQuery = "UPDATE products SET product_name='$name', description='$description', price='$price', review='$review', image='$uploadPath' WHERE id=$productId";
+    } 
+   
 
     if ($con->query($updateQuery) === TRUE) {
         echo "Product details updated successfully";

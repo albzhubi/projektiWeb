@@ -218,28 +218,29 @@
     <main>
         <div class="gallery">
         <?php 
-            while ($row = $result->fetch_assoc()) {
-                echo '<div class="content">
-                    <img src="./images/hoodie.png" alt="shoes">
-                    <h3>' . htmlspecialchars($row['product_name']) . '</h3>
-                    <p>' . htmlspecialchars($row['description']) . '</p>
-                    <h6>$' . number_format($row['price'], 2) . '</h6>
-                    <ul>';
-                
-                $numberOfStars = $row['review']; 
-                for ($i = 1; $i <= 5; $i++) {
-                    if ($i <= $numberOfStars) {
-                        echo '<li><i class="fa fa-star checked"></i></li>';
-                    } else {
-                        echo '<li><i class="fa fa-star"></i></li>';
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="content">
+                        <img src="' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['product_name']) . '">
+                        <h3>' . htmlspecialchars($row['product_name']) . '</h3>
+                        <p>' . htmlspecialchars($row['description']) . '</p>
+                        <h6>$' . number_format($row['price'], 2) . '</h6>
+                        <ul>';
+                    
+                    $numberOfStars = $row['review']; 
+                    for ($i = 1; $i <= 5; $i++) {
+                        if ($i <= $numberOfStars) {
+                            echo '<li><i class="fa fa-star checked"></i></li>';
+                        } else {
+                            echo '<li><i class="fa fa-star"></i></li>';
+                        }
                     }
+                    
+                    echo '</ul>
+                        <button class="buy">Buy Now</button>
+                    </div>';
                 }
-                
-                echo '</ul>
-                    <button class="buy">Buy Now</button>
-                </div>';
-            }
-            ?>
+        ?>
+
 
 
         </div>
